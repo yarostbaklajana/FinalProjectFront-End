@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catalog</title>
+    <script type="text/javascript" src="js/common/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/shopItems.js"></script>
+    <script type="text/javascript" src="js/common/jquery.tmpl.min.js"></script>
+    <script type="text/javascript" src="js/dropdown_menu.js"></script>
+    <script src="js/filters_slider.js"></script>
+    <script  src="js/storage.js"></script>
+
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header_footer.css">
+</head>
+<body>
+    <main class="container">
+    <header>
+        <div id="logo-short"><img src="img/mobile/icons/logo.png"></div>
+        <div id="logo-full"><img alt="logo" src="img/mobile/icons/logo_full.png"></div>
+        <div id="header-links-container">
+            <a href="#" class="sign-up">E-mail sign up</a>
+            <a href="shopping_bag.html">Bag</a>
+            <span class="total-price"></span>
+            (<span id="total-count"></span>)
+        </div>
+        <button type="button" id="dropdown-button" class="dropdown-menu-button"><img src="img/mobile/icons/nav_open.png"
+                                                                                     alt="menu"></button>
+        <button type="button" id="close-dropdown" class="dropdown-menu-button"><img
+                src="img/mobile/icons/menu_close.png"></button>
+        <div class="clearfix"></div>
+        <nav>
+            <div id="dropdown-menu">
+                <ul>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Handbags</a></li>
+                    <li><a href="#">Accesories</a></li>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Clearance</a></li>
+                    <li class="last"><a href="#">Store Locator</a></li>
+                    <div class="clearfix"></div>
+                </ul>
+                <input class="search-input" placeholder="Style Name">
+                <button class="search-button" type="button"><img alt="search" src="img/mobile/icons/search.png"></button>
+                <div class="clearfix"></div>
+            </div>
+        </nav>
+    </header>
+
+        <hr>
+        <section id="main-content">
+            <article id="filters">
+                <div class="filters-select">
+
+                    <label for="fashion-select">Fashion</label>
+                    <select id="fashion-select" class="first">
+                        <option value="filter">Casual style</option>
+                        <option value="filter">New look</option>
+                        <option value="filter">Sport</option>
+                        <option value="filter">Vintage</option>
+                        <option value="filter">Class</option>
+                    </select>
+
+                    <select>
+                        <option disabled="disabled" selected="selected">Product type</option>
+                        <option value="filter">Coats</option>
+                        <option value="filter">Dresses</option>
+                        <option value="filter">Jersee</option>
+                    </select>
+                    <select>
+                        <option disabled="disabled" selected="selected">Color</option>
+                        <option value="filter">Black</option>
+                        <option value="filter">Blue</option>
+                        <option value="filter">Red</option>
+                        <option value="filter">Green</option>
+                        <option value="filter">Goldeb</option>
+                    </select>
+                    <label for="brand-select">Brand</label>
+                    <select id="brand-select">
+                        <option value="filter">Antipodium</option>
+                        <option value="filter">Adidas</option>
+                        <option value="filter">New Balance</option>
+                        <option value="filter">River Island</option>
+                    </select>
+
+                    <label for="size-select">Size</label>
+                    <select id="size-select">
+                        <option value="filter">UK 18</option>
+                        <option value="filter">UK 18L</option>
+                        <option value="filter">UK 20</option>
+                        <option value="filter">UK 20L</option>
+                        <option value="filter">UK 20S</option>
+                        <option value="filter">UK 22</option>
+                    </select>
+
+                    <select class="last">
+                        <option disabled="disabled" selected="selected">Price range</option>
+                        <option value="filter">UK 18</option>
+                        <option value="filter">UK 18L</option>
+                        <option value="filter">UK 20</option>
+                    </select>
+                    <div class="clearfix"></div>
+                </div>
+
+                <ul class="item-properties">
+                    <li><span class="item-property not-selected-property">Not selected,</span></li>
+                    <li><span class="item-property not-selected-property">Not selected,</span></li>
+                    <li><span class="item-property not-selected-property">Not selected,</span></li>
+                    <li><span class="item-property not-selected-property">Not selected,</span></li>
+                    <li><span class="item-property not-selected-property">Not selected,</span></li>
+                    <li><span class="item-property not-selected-property">Not selected</span></li>
+                    <button class="filter-btn" type="button"><img src="img/mobile/icons/filter.png"></button>
+                </ul>
+                <ul class="dropdown-filters">
+                    <h2 class="heading">Drag and select</h2>
+                    <h5>Fashion</h5>
+                    <li class="swipe-line">
+                        <p class="not-selected-property"><span>Not selected</span></p>
+                        <p href="#"><span>Casual style</span></p>
+                        <p><span>New look</span></p>
+                        <p><span>Sport</span></p>
+                        <p><span>Vintage</span></p>
+                        <p><span>Class</span></p>
+                    </li>
+                    <h5>Product type</h5>
+                    <li class="swipe-line">
+                        <p class="not-selected-property"><span>Not selected</span></p>
+                        <p><span>Coats &amp; Jackets</span></p>
+                        <p><span>Dresses</span></p>
+                        <p><span>Jersee</span></p>
+                    </li>
+                    <h5>Color</h5>
+                    <li class="swipe-line">
+                        <p class="not-selected-property"><span>Not selected</span></p>
+                        <p><span>Black</span></p>
+                        <p><span>Blue</span></p>
+                        <p><span>Red</span></p>
+                        <p><span>Green</span></p>
+                        <p><span>Golden</span></p>
+                    </li>
+                    <h5>Brand</h5>
+                    <li class="swipe-line">
+                        <p class="not-selected-property"><span>Not selected</span></p>
+                        <p><span>Antipodium</span></p>
+                        <p><span>Adidas</span></p>
+                        <p><span>New Balance</span></p>
+                        <p><span>River Island</span></p>
+                    </li>
+                    <h5>Size</h5>
+                    <li class="swipe-line">
+                        <p class="not-selected-property"><span>Not selected</span></p>
+                        <p><span>UK 18</span></p>
+                        <p><span>UK 18L</span></p>
+                        <p><span>UK 20</span></p>
+                        <p><span>UK 20L</span></p>
+                        <p><span>UK 20S</span></p>
+                        <p><span>UK 22</span></p>
+                    </li>
+                    <h5>Price range</h5>
+                    <li class="swipe-line">
+                        <p class="not-selected-property"><span>Not selected</span></p>
+                        <p><span>To &pound;99</span></p>
+                        <p><span>&pound;100-&pound;299</span></p>
+                        <p><span>From &pound;300</span></p>
+                    </li>
+                </ul>
+            </article>
+
+            <hr>
+
+           <section id="catalog-body">
+
+               <div class="clearfix"></div>
+           </section>
+
+            <article id="central-button">
+                <button type="button">Show more</button>
+            </article>
+            <hr>
+            <article id="banners">
+                <figure class="left-item-banner on-details-page">
+                    <figcaption class="name">Adidas blue<span class="status">For men</span></figcaption>
+                    <img src="img/mobile/banners/7.png" alt="shoes">
+                </figure>
+                <figure class="right-item-banner on-details-page">
+                    <figcaption class="name">Repair Patches<span class="status">&pound;150.50</span></figcaption>
+                    <img src="img/mobile/banners/8.png">
+                </figure>
+                <figure class="hidden-desktop-banner on-details-page">
+                    <figcaption class="name">Sale<span class="status">-70&percnt;</span>
+                    </figcaption>
+                    <img src="img/mobile/banners/9.png">
+                </figure>
+                <div class="clearfix"></div>
+            </article>
+            <hr>
+        </section>
+    <footer>
+        <section id="footer-support-links-container">
+            <article>
+                <ul>
+                    <h3>Quick Links</h3>
+                    <li><a href="#">Store locator</a></li>
+                    <li><a href="#">Gift cards</a></li>
+                    <li><a href="#">Size guide</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </article>
+            <article>
+                <ul>
+                    <h3>Customer Care</h3>
+                    <li><a href="#">Customer service</a></li>
+                    <li><a href="#">Track my order</a></li>
+                    <li><a href="#">Return policy</a></li>
+                    <li><a href="#">Shipping & delivery</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </article>
+            <div class="clearfix"></div>
+        </section>
+
+        <hr class="line-hidden-in-tablet">
+
+        <section id="contact-info-container">
+            <article>
+                <h3>Questions</h3>
+
+                <p><img src="img/mobile/icons/ico_tw.png" alt="icon"> Tweet us <span class="temp">@template</span></p>
+            </article>
+            <article>
+                <h3>Order by phone</h3>
+
+                <p>8-800-409-47-12</p>
+            </article>
+            <article class="delivery-service-advertisement">
+                <p>We have delivery service which operates in 23 major European cities. Delivery time - 3-5 days.</p>
+
+            </article>
+            <article class="follow-buttons-container">
+                <p class="social-fb"><img src="img/mobile/icons/soc_f.png" alt="facebook"></p>
+
+                <p class="social-tw"><img src="img/mobile/icons/soc_tw.png"></p>
+            </article>
+            <div class="clearfix"></div>
+        </section>
+
+        <hr class="line-hidden-in-tablet">
+
+        <section id="social">
+            <nav class="footer-navigation">
+                <p>Legal notice</p>
+
+                <p>Privacy policy</p>
+
+                <p>Site map</p>
+            </nav>
+            <article class="follow-buttons-container">
+                <p class="social-fb"><img src="img/mobile/icons/soc_f.png" alt="facebook"></p>
+
+                <p class="social-tw"><img src="img/mobile/icons/soc_tw.png"></p>
+            </article>
+            <div class="clearfix"></div>
+        </section>
+        <div class="clearfix"></div>
+
+        <hr>
+
+        <section id="about-site-container">
+            <article class="trademark">
+                <p>&copy; 2010-2015, The Template Group inc.</p>
+            </article>
+
+            <nav class="footer-navigation">
+                <p>Legal notice</p>
+
+                <p>Privacy policy</p>
+
+                <p>Site map</p>
+            </nav>
+
+            <article class="share">
+                <p>Share
+                    <button type="button">1 437</button>
+                </p>
+            </article>
+
+            <div class="clearfix"></div>
+        </section>
+
+    </footer>
+    </main>
+
+    <script id="item-tmpl" type="text/x-jquery-tmpl">
+        <figure class="item">
+            <figcaption class="image">
+                <img src="img/mobile/catalog/${source}"} />
+                <p class="details link-onhover"><a href="item_details.html?id=${id}">Quick view</a></p>
+                <p class="more link-onhover"><a href="item_details.html?id=${id}">More photos</a></p>
+                <div class="filter-for-item"></div>
+            </figcaption>
+            <figcaption class="title">
+                <h3>
+                    ${name}
+                </h3>
+                <p class="price">
+                    ${price}
+                    <span class="status">
+                        ${status}
+                    </span>
+                </p>
+             </figcaption>
+
+        </figure>
+
+        {{if this.index(this.data) == 1 || this.index(this.data) == 2 || this.index(this.data) == 3}}
+                 <div class='discount-offer extra-discount-offer-${$item.index($item.data)}'>
+                    <h3>Last weekend <strong>extra 50%</strong> off on all reduced boots and shoulder bags</h3>
+                    <p>This offer is valid in-store and online. Prices displayed reflect this additional discount. This offer ends at 11:59 GMT on March 1st 2015</p>
+                 </div>
+            {{/if}}
+    </script>
+
+    <script>
+        $('#item-tmpl').tmpl(shopItems, {
+            index: function(item) {
+                return $.inArray(item, shopItems);
+            }
+        }).insertBefore('#catalog-body .clearfix');
+    </script>
+</body>
+</html>

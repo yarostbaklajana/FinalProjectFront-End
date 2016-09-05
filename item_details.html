@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Item Details</title>
+
+    <script src="js/common/jquery-3.1.0.min.js"></script>
+    <script src="js/common/jquery.tmpl.min.js"></script>
+    <script src="js/dropdown_menu.js"></script>
+
+    <script src="js/shopItems.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/thumbnailViewer.js"></script>
+
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header_footer.css">
+</head>
+<body>
+<main class="container">
+    <header>
+        <div id="logo-short"><img src="img/mobile/icons/logo.png"></div>
+        <div id="logo-full"><img alt="logo" src="img/mobile/icons/logo_full.png"></div>
+        <div id="header-links-container">
+            <a href="#" class="sign-up">E-mail sign up</a>
+            <a href="shopping_bag.html">Bag</a>
+            <span class="total-price"></span>
+            (<span id="total-count"></span>)
+        </div>
+        <button type="button" id="dropdown-button" class="dropdown-menu-button"><img src="img/mobile/icons/nav_open.png"
+                                                                                     alt="menu"></button>
+        <button type="button" id="close-dropdown" class="dropdown-menu-button"><img
+                src="img/mobile/icons/menu_close.png"></button>
+        <div class="clearfix"></div>
+        <nav>
+            <div id="dropdown-menu">
+                <ul>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Handbags</a></li>
+                    <li><a href="#">Accesories</a></li>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Clearance</a></li>
+                    <li class="last"><a href="#">Store Locator</a></li>
+                    <div class="clearfix"></div>
+                </ul>
+                <input class="search-input" placeholder="Style Name">
+                <button class="search-button" type="button"><img alt="search" src="img/mobile/icons/search.png"></button>
+                <div class="clearfix"></div>
+            </div>
+        </nav>
+    </header>
+    <hr>
+    <section id="main-content">
+        <article class="back-to-catalog">
+            <a href="catalog.html">&lt; Back to catalog</a>
+        </article>
+        <hr>
+        <article id="item">
+
+        </article>
+        <article id="central-button">
+            <button type="button" class="add-to-bag-btn" id="add-to-bag-btn">Add to bag</button>
+        </article>
+        <hr>
+        <article id="banners">
+            <figure class="left-item-banner on-details-page">
+                <figcaption class="name">Adidas blue<span class="status">For men</span></figcaption>
+                <img src="img/mobile/banners/7.png" alt="shoes">
+            </figure>
+            <figure class="right-item-banner on-details-page">
+                <figcaption class="name">Repair Patches<span class="status">&pound;150.50</span></figcaption>
+                <img src="img/mobile/banners/8.png">
+            </figure>
+            <figure class="hidden-desktop-banner on-details-page">
+                <figcaption class="name">Sale<span class="status">-70&percnt;</span>
+                </figcaption>
+                <img src="img/mobile/banners/9.png">
+            </figure>
+            <div class="clearfix"></div>
+        </article>
+
+    </section>
+    <hr>
+    <footer>
+        <section id="footer-support-links-container">
+            <article>
+                <ul>
+                    <h3>Quick Links</h3>
+                    <li><a href="#">Store locator</a></li>
+                    <li><a href="#">Gift cards</a></li>
+                    <li><a href="#">Size guide</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </article>
+            <article>
+                <ul>
+                    <h3>Customer Care</h3>
+                    <li><a href="#">Customer service</a></li>
+                    <li><a href="#">Track my order</a></li>
+                    <li><a href="#">Return policy</a></li>
+                    <li><a href="#">Shipping & delivery</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </article>
+            <div class="clearfix"></div>
+        </section>
+
+        <hr class="line-hidden-in-tablet">
+
+        <section id="contact-info-container">
+            <article>
+                <h3>Questions</h3>
+
+                <p><img src="img/mobile/icons/ico_tw.png" alt="icon"> Tweet us <span class="temp">@template</span></p>
+            </article>
+            <article>
+                <h3>Order by phone</h3>
+
+                <p>8-800-409-47-12</p>
+            </article>
+            <article class="delivery-service-advertisement">
+                <p>We have delivery service which operates in 23 major European cities. Delivery time - 3-5 days.</p>
+
+            </article>
+            <article class="follow-buttons-container">
+                <p class="social-fb"><img src="img/mobile/icons/soc_f.png" alt="facebook"></p>
+
+                <p class="social-tw"><img src="img/mobile/icons/soc_tw.png"></p>
+            </article>
+            <div class="clearfix"></div>
+        </section>
+
+        <hr class="line-hidden-in-tablet">
+
+        <section id="social">
+            <nav class="footer-navigation">
+                <p>Legal notice</p>
+
+                <p>Privacy policy</p>
+
+                <p>Site map</p>
+            </nav>
+            <article class="follow-buttons-container">
+                <p class="social-fb"><img src="img/mobile/icons/soc_f.png" alt="facebook"></p>
+
+                <p class="social-tw"><img src="img/mobile/icons/soc_tw.png"></p>
+            </article>
+            <div class="clearfix"></div>
+        </section>
+        <div class="clearfix"></div>
+
+        <hr>
+
+        <section id="about-site-container">
+            <article class="trademark">
+                <p>&copy; 2010-2015, The Template Group inc.</p>
+            </article>
+
+            <nav class="footer-navigation">
+                <p>Legal notice</p>
+
+                <p>Privacy policy</p>
+
+                <p>Site map</p>
+            </nav>
+
+            <article class="share">
+                <p>Share
+                    <button type="button">1 437</button>
+                </p>
+            </article>
+
+            <div class="clearfix"></div>
+        </section>
+
+    </footer>
+</main>
+
+<script id="item-details-tmpl" type="text/x-jquery-tmpl">
+    <figure>
+                <div class="item-big-container">
+                    <img id="item-image" src="img/mobile/catalog/${source}" alt="item">
+                </div>
+                <div class="thumbnail-container">
+                    <img class="thumbnail chosen-thumbnail" src="img/mobile/catalog/${source}" alt="item thumbnail">
+                    {{each(i) thumbnails }}
+                        <img class="thumbnail" src="img/thumbnails/${thumbnails[i]}" alt="item thumbnail">
+                    {{/each}}
+                </div>
+
+                <div class="clearfix"></div>
+                <figcaption>
+                    <h2 id="item-name">${name}</h2>
+                    <p id="item-price" class="price">${price}</p>
+                    <p class="info">Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs and a subtle stripe pattern throughout. </p>
+                </figcaption>
+
+                <figcaption class="size-params">
+                    <h2>Size</h2>
+                    <div class="parameters-button-container first">
+                        <input type="radio" class="param-input" name="size" id="size1" checked="checked">
+                        <label class="param-label size-label" for="size1">UK 52</label>
+                    </div>
+                    <div class="parameters-button-container second">
+                        <input type="radio" class="param-input" name="size" id="size2">
+                        <label class="param-label size-label" for="size2">UK 54</label>
+                    </div>
+                    <div class="parameters-button-container third">
+                        <input type="radio" class="param-input" name="size" id="size3">
+                        <label class="param-label size-label" for="size3">UK 56</label>
+                    </div>
+                </figcaption>
+                <div class="clearfix"></div>
+                <figcaption class="color-params">
+                    <h2>Color</h2>
+                    <div class="parameters-button-container first">
+                        <input type="radio" class="param-input" name="color" id="color1" checked="checked">
+                        <label class="param-label color-label" for="color1" >Black</label>
+                    </div>
+                    <div class="parameters-button-container second">
+                        <input type="radio" class="param-input" name="color" id="color2">
+                        <label class="param-label color-label" for="color2">Blue</label>
+                    </div>
+                </figcaption>
+
+                <div class="clearfix"></div>
+            </figure>
+
+</script>
+
+<script type="text/javascript">
+    (function() {
+        var searchParam = window.location.search;
+        var query = "?id=";
+        if(searchParam.indexOf(query) != 0) {
+            alert("Incorrect id of item");
+            return;
+        }
+        var idStr = searchParam.replace(query, '');
+        var id = parseInt(idStr, 10);
+
+        if(!id) {
+            alert("Incorrect id of item");
+            return;
+        }
+
+        var itemWithId = shopItems.filter(function(obj){
+            return obj.id == id;
+        })[0];
+        $('#item-details-tmpl').tmpl(itemWithId).appendTo('#item');
+
+    })();
+
+
+
+</script>
+
+</body>
+</html>
