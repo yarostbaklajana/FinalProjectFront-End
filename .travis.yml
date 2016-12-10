@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - 6.9.1
+before_install:
+ - chmod 755 ./deploy.sh
+script: echo "Skipping build"
+deploy:
+  provider: script
+  script: ./deploy.sh
+  skip_cleanup: true
+  on: 
+    all_branches: true
+    condition: "$TRAVIS_BRANCH != gh-pages" 
+    
