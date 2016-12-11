@@ -34,7 +34,7 @@ header {
     line-height: 63px;
 }
 
-#header-links-container a.sign-up {
+sign-up-link {
     display: none;
 }
 
@@ -86,6 +86,8 @@ footer {
 
 
 .quick-links,  .customer-care {
+    margin-top: 0;
+    margin-bottom: 0;
     list-style-type: none;
     padding: 0;
 }
@@ -171,11 +173,13 @@ footer {
 /* for dropdown menu */
 
 #dropdown-menu {
+
     font-family: "Open Sans";
     font-size: 26px;
     display: none;
     z-index: 3;
     position: absolute;
+    top: 70px;
     background-color: white;
     width: 100%;
     box-shadow: 1px 150px 36px 33px rgba(0,0,0,0.75);
@@ -197,220 +201,105 @@ footer {
     color: black;
 }
 
-#dropdown-menu .search-input {
+.search-input {
     border: none;
     outline: none;
     border-bottom: 1px solid #e5e5e5;
     margin: 0 0 20px 20px;
 }
 
-#dropdown-menu .search-button {
+.search-button {
     display: none;
 }
 
 @media only screen and (min-width: 480px) {
-    #logo-full {
-        display: block;
-        margin-left: 40px;
-        height: 80px;
-    }
-
-    #logo-short {
-        display: none;
-    }
-
-    #header-links-container {
-        float: right;
-        margin-right: 40px;
-        height: 75px;
-    }
-
-    #header-links-container a.sign-up {
-        display: inline;
-        height: 75px;
-        line-height: 75px;
-        margin-right: 20px;
-    }
-
-
-    .dropdown-menu-button {
-        display: none !important;
-    }
-
-    #dropdown-menu {
-        margin-bottom: 25px;
-        font-size: 10px;
-        position: static;
-        display: block;
-    }
-
-
-    #dropdown-menu li {
-        display: inline-block;
-        position: inherit;
-        margin: 0;
-        margin-right: 5px;
-    }
-
-    #dropdown-menu li.last {
-        margin-right: 0;
-    }
-
-
-
-    #dropdown-menu ul {
-        margin-left: 40px;
-        float: left;
-        padding: 0;
-    }
-
-    #dropdown-menu .search-input {
-        margin: 0;
-        display: none;
-    }
-
-    #dropdown-menu .search-button {
-        display: inline;
-        float: right;
-        margin-right: 40px;
-        padding: 0;
-        border: none;
-        background: transparent;
-    }
-
-    #footer-support-links-container {
-        font-family: 'Open Sans';
-        width: 50%;
-        float: left;
-        margin:0 0 75px 40px;
-        font-size: 14px;
-    }
-
-    #footer-support-links-container article:nth-child(2) ul{
-        margin-left: 0;
-    }
-
-    #footer-support-links-container article {
-        margin-top: 35px;
-    }
-
-
-    #footer-support-links-container h3 {
-        font-family: 'Roboto';
-        font-size: 14px;
-        margin-bottom: 40px;
-    }
-
-    #footer-support-links-container li {
-        line-height: 20px;
-    }
-
-    #contact-info-container {
-        margin: 0;
-        float: right;
-        width: 30%;
-        margin-right: 40px;
-    }
-
-    #contact-info-container h3 {
-        font-family: 'Roboto';
-        font-size: 14px;
-        margin-bottom: 18px;
-    }
-
-    #contact-info-container article {
-        width: 100%;
-        border: none !important;
-        padding: 0 !important;
-        margin: 50px 0 0 0;
-    }
-
-    #contact-info-container article:nth-child(2) {
-        margin: 25px auto;
-    }
-
-    #contact-info-container article h3,
-    #contact-info-container article p {
-        margin-top: 0;
-    }
-
-
-
-    #contact-info-container .follow-buttons-container {
-        display: inline;
-    }
-
-    #contact-info-container .follow-buttons-container p {
-        display: inline;
-        margin-right: 20px;
-    }
+   
 
 
 }
 
 @media only screen and (min-width: 768px) {
-    #dropdown-menu {
-        font-size: 12px;
-        font-weight: bold;
-    }
-
-    #dropdown-menu li {
-        margin-right: 25px;
-    }
-
-    #footer-support-links-container {
-        width: 54%;
-    }
-
-    #footer-support-links-container article:nth-child(2) ul{
-        margin-left: 20px;
-    }
-
-    #social {
+    #logo-short {
         display: none;
     }
 
-    #about-site-container {
-        font-family: 'Open Sans';
+    #logo-full {
         margin-left: 40px;
-        height: 93px;
-    }
-    #about-site-container p{
-        line-height: 30px;
-    }
-
-    #about-site-container .trademark {
-        width: 45%;
-    }
-
-    #about-site-container .trademark p {
-        line-height: 80px;
-    }
-
-    #about-site-container .share {
-        text-align: left;
-        width: 13%;
-    }
-
-    #about-site-container .share p {
-        margin: 0;
-        line-height: 80px;
-        font-size: 14px;
-    }
-
-    #about-site-container .footer-navigation {
-        width: 42%;
         display: block;
-        float: right;
-        text-align: right;
-
     }
 
-    #about-site-container .footer-navigation p {
+    .sign-up-link {
         display: inline;
-        margin-left: 20px;
-        line-height: 80px;
     }
+
+    .dropdown-menu-button {
+        display: none !important;
+    }
+
+    #header-links-container {
+        float: right;
+        margin-right: 40px;
+    }
+
+
+    #dropdown-menu {
+        position: static;
+        font-size: 12px;
+        font-weight: bold;
+        box-shadow: none;
+        display: block !important;
+        clear: both;
+    }
+
+    .navigation-links-container {
+        display: inline;
+        margin-left: 40px;
+    }
+
+    .navigation-links-container li {
+        display: inline;
+        margin-right: 16px;
+    }
+
+    .search-input {
+        display: none;
+    }
+
+    .search-button {
+        display: inline;
+        outline: none;
+        border: none;
+        background: transparent;
+    }
+
+    .quick-links, .customer-care, .questions-info, .order-by-phone-info {
+        width: 28%;
+    }
+
+    .follow-buttons-container {
+        float: left;
+    }
+
+    .footer-navigation {
+        display: none;
+    }
+
+    .about-site-info .footer-navigation {
+        display: block;
+        width: 33.3%;
+        float: right;
+        margin: 0;
+    }
+
+    .trademark {
+        width: 33.3%;
+    }
+
+    .share {
+        margin-left: 0;
+        float: left;
+    }
+   
 }
 
 @media only screen and (min-width: 1024px) {
