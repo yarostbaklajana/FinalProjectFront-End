@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 figure {
@@ -29,94 +29,66 @@ figcaption img {
     vertical-align: middle;
 }
 
-hr {
-    height: 1px;
-    border: none;
+#carousel {
+
+}
+
+.slides-list {
+    list-style-type: none;
     margin: 0;
-    background-color: #e5e5e5;
+    padding: 0;
+    width: 300%;
 }
 
-#main-content button {
-    text-align: center;
-    font-size: 18px;
-    font-family: 'Roboto';
-    font-weight: bold;
-    border: 1px solid #e5e5e5;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-#central-button button {
-    box-sizing: border-box;
-    width: 220px;
-    height: 62px;
-    outline: none;
-    margin: 0 auto 105px auto;
-    display: block;
-}
-
-#central-button button:hover {
-    background-color: #757575;
-    color: white;
-}
-
-#banners {
-    font-family: "Open Sans";
-    overflow: hidden;
-    width: 150%;
-}
-
-#banners figure img {
-    width: 100%;
-}
-
-#banners .left-item-banner {
+.slide {
+    width: 33.3%;
     float: left;
-    width: 66.66%;
     position: relative;
 }
 
-#banners .right-item-banner {
-    float: right;
-    width: 33.33%;
-    position: relative;
+.slide img[alt="black and white"], .slide img[alt="shoes"] {
+    width: 200%;
 }
 
-#banners .left-item-banner .name {
-    margin: 0;
-    position: absolute;
-    font-size: 24px;
-    left: 59%;
-    line-height: 31px;
-    top: 30px;
-    font-weight: bold;
-}
-
-#banners .right-item-banner .name {
-    position: absolute;
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
+.slide img {
+    vertical-align: middle;
     width: 100%;
 }
 
-#banners .status {
-    font-family: 'Crimson';
-    font-weight: normal;
-    font-size: 14px;
-    display: block;
+#carousel-controls-container {
+    clear: both;
+}
+
+.main-button-container {
     text-align: center;
-    color: #757575;
-    font-style: italic;
+    clear: both;
 }
 
-#banners .left-item-banner.on-details-page .name,
-#banners .left-item-banner.on-details-page .status {
-    color: white;
+.main-button {
+    height: 60px;
+    width: 215px;
 }
 
-/* for every page the same styles */
+.banners {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #c9cbcd;
+    border-bottom: 1px solid #c9cbcd;
+    
+}
+
+.nike-red-banner {
+    width: 100%;
+}
+
+
+.sale-banner, .caps-and-hats-banner {
+    display: none;
+}
+
+.new-arrivals {
+    clear: both;
+}
 
 
 .heading {
@@ -175,218 +147,6 @@ p.link-onhover a {
     text-decoration: none;
 }
 
-
-
-/*for items*/
-
-#promotions {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-
-#slides {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-
-#slides ul {
-    list-style-type: none;
-    width: 300%;
-    margin: 0;
-    padding: 0;
-}
-
-#slides .slide {
-    overflow: hidden;
-    position: relative;
-    width: 33.333334%;
-    float: left;
-    transition: transform .5s ease-in-out;
-    vertical-align: middle;
-    height: 530px;
-    display: flex;
-    align-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#slides .slide:first-child .new-collection-cover {
-    width: 100%;
-    height: 100%;
-    flex-basis: 100%;
-    background: url("../img/mobile/items_in_carosel/1.png") no-repeat center;
-    background-size: cover;
-}
-
-#slides .slide:nth-child(3) {
-    background: url("../img/mobile/items_in_carosel/discount-shoes-bgr.png") center no-repeat;
-    background-size: cover;
-}
-
-#slides .some-promo .left-column-promo {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 475px;
-    align-items: center;
-}
-
-#slides .promo {
-    text-decoration: none;
-    text-align: center;
-}
-
-#slides  .promo h3 {
-    position: relative;
-    font-size: 18px;
-    margin: 0;
-    font-weight: normal;
-}
-
-#slides .promo .status {
-    display: block;
-    font-size: 10px;
-    font-style: italic;
-    font-family: 'Crimson';
-    margin-top: 5px;
-}
-
-#slides .some-promo .promo-first {
-    flex-basis: 100%;
-    height: 237px;
-    background: #324063 url("../img/mobile/items_in_carosel/2.png") center no-repeat;
-    background-size: cover;
-}
-
-#slides .some-promo .promo-first h3,
-#slides .some-promo .promo-first .status,
-#slides .some-promo .promo-second h3,
-#slides .some-promo .promo-second .status {
-    color: white;
-}
-
-#slides .some-promo .promo-first h3 {
-    top: 9%;
-    left: 20%;
-}
-
-
-#slides .some-promo .promo-second h3,
-#slides .some-promo .promo-third h3,
-#slides .some-promo .promo-fourth h3{
-    top: 70%;
-}
-
-#slides .some-promo .promo-third h3 {
-    color: #f14a58;
-}
-
-#slides .some-promo .promo-third .status,
-#slides .some-promo .promo-fourth .status,
-#slides .some-promo .promo-fifth .status,
-#slides .some-promo .promo-sixth .status{
-    color: #757575;
-}
-
-#slides .some-promo .promo-fourth h3,
-#slides .some-promo .promo-fifth h3,
-#slides .some-promo .promo-sixth h3{
-    color: black;
-}
-
-#slides .some-promo .promo-fifth h3 {
-    width: 70%;
-    margin: 0 auto;
-    font-size: 14px;
-    top: 30%;
-    line-height: 18px;
-}
-
-#slides .some-promo .promo-sixth h3 {
-    top: 9%;
-}
-
-#slides .shoes-promo {
-    text-align: center;
-}
-
-#slides .shoes-promo h3 {
-    position: absolute;
-    margin: 0 auto;
-    width: 70%;
-    bottom: 15%;
-    left: 15%;
-    right: 15%;
-}
-
-#slides .some-promo .promo-fifth .extra-discount,
-#slides .shoes-promo .extra-discount {
-    color: #50c1e9;
-}
-
-#slides .some-promo .promo-second {
-    background: #c9cbcd url("../img/mobile/items_in_carosel/3.png") center no-repeat;
-}
-
-#slides .some-promo .promo-third {
-    background: white url("../img/mobile/items_in_carosel/4.png") center no-repeat;
-}
-
-#slides .some-promo .promo-third,
-#slides .some-promo .promo-second {
-    flex-basis: 50%;
-    height: 236px;
-    background-size: cover;
-}
-
-#slides .some-promo .promo-fourth,
-#slides .some-promo .promo-fifth,
-#slides .some-promo .promo-sixth {
-    display: none;
-}
-
-/* for carousel */
-
-#carousel-controls-container {
-    text-align: center;
-    width: 100%;
-    border-top: 1px solid #e5e5e5;
-    position: absolute;
-    z-index: 2;
-    height: 55px;
-    bottom: 0;
-}
-
-input[type="radio"] {
-    display: none;
-    outline: none;
-}
-
-input[type="radio"] + .stylish span {
-    margin-top: 20px;
-    display: inline-block;
-    width: 19px;
-    height: 19px;
-    background: url("../img/mobile/icons/controls.png") center no-repeat;
-}
-
-input[type="radio"].checked + .stylish span {
-    background: url("../img/mobile/icons/controls_checked.png") center no-repeat;
-}
-
-/* for carousel controls */
-
-
-
-#banners .hidden-desktop-banner {
-    display: none;
-}
 /* for start page */
 
 #filters {
@@ -623,6 +383,10 @@ input[type="radio"].checked + .stylish span {
     line-height: 18px;
 }
 
+#main-content {
+    flex: 1;
+}
+
 #main-content .item-in-bag .about .remove-item-btn {
     font-family: "Open Sans";
     font-weight: bold;
@@ -850,6 +614,16 @@ input[type="radio"].checked + .stylish span {
         display: block;
         margin-right: 5%;
     }
+
+    .nike-red-banner {
+        width: 66%;
+        border-right: 1px solid #c9cbcd;
+    }
+
+    .sale-banner {
+        display: block;
+        width: 34%;
+    }
     
 
     #bag-body {
@@ -860,42 +634,7 @@ input[type="radio"].checked + .stylish span {
         width: 89.5%;
     }
 
-    #slides .slide {
-        height: 820px;
-    }
-
-    #slides .slide:first-child img,
-    #slides .slide:nth-child(3) img {
-        height: 820px;
-    }
-
-    #slides .some-promo .left-column-promo,
-    #slides .some-promo .right-column-promo,
-    #slides .some-promo .promo-sixth{
-        height: 760px;
-    }
-
-
-    #slides .some-promo .promo-first,
-    #slides .some-promo .promo-second,
-    #slides .some-promo .promo-third,
-    #slides .some-promo .promo-fourth,
-    #slides .some-promo .promo-fifth {
-        height: 253px;
-    }
-
-
-    #slides .promo h3 {
-        font-size: 24px;
-    }
-
-    #slides .promo .status {
-        font-size: 14px;
-    }
-
-    #slides .some-promo .promo-fifth h3 {
-        line-height: 30px;
-    }
+   
 
     .buy-items-btn-container #buy-items {
         width: 260px !important;
@@ -917,11 +656,7 @@ input[type="radio"].checked + .stylish span {
 }
 
 @media only screen and (min-width: 1024px) {
-    #central-button button {
-        height: 75px;
-        width: 340px;
-        margin-bottom: 155px;
-    }
+   
     
     .item {
         width: 18.75%;
@@ -932,74 +667,21 @@ input[type="radio"].checked + .stylish span {
         margin-right: 5%;
     }
 
-    
+    .sale-banner {
+        display: none;
+    }
+
+    .caps-and-hats-banner {
+        display: block;
+    }
+
+    .nike-red-banner, .caps-and-hats-banner {
+        width: 50%;
+    }
+
 
     /* carousel desktop */
-    #slides .slide {
-        height: 850px;
-    }
-
-    #slides .slide:first-child img,
-    #slides .slide:nth-child(3) img {
-        height: 850px;
-        flex-basis: auto;
-    }
-
-    #slides .some-promo .left-column-promo {
-        height: 770px;
-        width: 75%;
-    }
-
-    #slides .some-promo .right-column-promo {
-        height: 770px;
-        width: 25%;
-    }
-
-    #slides .some-promo .promo {
-        background-size: cover;
-    }
-
-    #slides .some-promo .promo-first {
-        flex-basis: 66.6%;
-        order: 1;
-        height: 385px;
-    }
-
-    #slides .some-promo .promo-second,
-    #slides .some-promo .promo-third,
-    #slides .some-promo .promo-fourth,
-    #slides .some-promo .promo-fifth {
-        height: 385px;
-        flex-basis: 33.3%;
-    }
-
-    #slides .some-promo .promo-second {
-        order: 3;
-    }
-
-    #slides .some-promo .promo-third {
-        order: 4;
-    }
-
-    #slides .some-promo .promo-fourth {
-        order: 2;
-    }
-
-    #slides .some-promo .promo-fifth {
-        order: 5;
-    }
-
-    #slides .some-promo .promo-sixth {
-        height: 770px;
-    }
-
-    #carousel-controls-container {
-        height: 80px;
-    }
-
-    input[type="radio"] + .stylish span {
-        margin-top: 30px;
-    }
+   
 
     /*catalog desktop */
     #catalog-body {
@@ -1126,68 +808,9 @@ input[type="radio"].checked + .stylish span {
     /*start page desktop */
     
 
-    #central-button.on-start-page-cntrl-btn button{
-        width: 340px;
-        margin-bottom: 80px;
-        margin-top: 20px;
-    }
+    
 
-    #banners .left-item-banner{
-        width: 50%;
-    }
-
-    #banners .right-item-banner,
-    #banners .left-item-banner
-    {
-        display: none;
-    }
-
-    #banners .hidden-desktop-banner {
-        width: 50%;
-        display: block;
-        position: relative;
-        float: left;
-    }
-
-    #banners .right-item-banner.on-details-page,
-    #banners .left-item-banner.on-details-page {
-        display: block;
-        float: left;
-    }
-
-    #banners .left-item-banner.on-details-page {
-        width: 50%;
-    }
-
-    #banners .right-item-banner.on-details-page {
-        width: 25%;
-    }
-
-    #banners .hidden-desktop-banner.on-details-page {
-        width: 25%;
-        float: right;
-    }
-
-    #banners .hidden-desktop-banner img {
-        width: 100%;
-    }
-
-    #banners .hidden-desktop-banner .name {
-        margin: 0;
-        position: absolute;
-        font-size: 28px;
-        left: 59%;
-        line-height: 31px;
-        top: 62px;
-        font-weight: bold;
-    }
-
-    #banners .hidden-desktop-banner.on-details-page .name{
-        line-height: 35px;
-        top: 65%;
-        left: 40%;
-        color: #f14a58;
-    }
+    
 
     #shopping-bag-buttons-container .buy-items-btn-container button{
         width: 340px !important;

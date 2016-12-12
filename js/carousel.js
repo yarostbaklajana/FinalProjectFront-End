@@ -1,74 +1,69 @@
 'use strict';
+{
 
-$(document).ready(function() {
-
-    var carouselInterval;
-    var currentPosition = 0;
-
-    $('#carousel-controls-container').click(function(e) {
-        clearTimeout(carouselInterval);
-
-         if($(e.target).hasClass('control') && !$(e.target).hasClass('checked')) {
-             var previousChecked = $('input.checked');
-             var currentChecked = $(e.target);
-             var currentId = parseInt(currentChecked.attr('id'));
-             slideNeedCountOfTimes($('.slide'), currentId,  currentPosition,  100);
-
-             previousChecked.removeClass('checked');
-             currentChecked.addClass('checked');
-         }
-        launchCarousel();
-    });
-
-
-
-    function slideNeedCountOfTimes(sliderElements, current,  currentPosition, step) {
-
-        if(currentPosition <= 200 && currentPosition >= -200) {
-                currentPosition = -(current-1) * step;
-                slideOn(currentPosition, sliderElements);
+    class Carousel {
+        constructor() {
+            this.currentPosition = 0;
+            this.step = 100;
+            this.previousChecked = 1;
+            this.slides = document.querySelectorAll('.slide');
+            this.carouselControlsContainer = document.getElementById('carousel-controls-container');
         }
 
-    }
+        addCarouselButtons() {
 
-    function slideOn(position, element) {
-        element.css('transform', 'translateX(' + position + '%)');
-        currentPosition = position;
-    }
+            this.slides.forEach( (item, index) =>  {
+                let carouselButton = document.createElement('li');
+                carouselButton.className = 'carousel-control';
+                carouselButton.setAttribute('id', 'carousel-btn-' + index)
+                if (index === 1) {
+                    carouselButton.className = carouselButton.classList.add('checked');
+                }
 
+                this.carouselControlsContainer.appendChild(carouselButton);
+            });
+            
+            
+        }
 
+        launchCarousel() {
 
+            setInterval(() => {
+                if (this.currentPosition > (-this.step * (this.slides.length - 1))) {
+                    this.currentPosition -= this.step;
+                    this.turnSlide(this.currentPosition);
+                    this.changeCheckedButton(this.previousChecked + 1);
+                } else {
+                    this.currentPosition = 0;
+                    this.turnSlide(this.currentPosition);
+                    this.changeCheckedButton(1);
+                }
 
-    function launchCarousel() {
-        carouselInterval = setInterval(function() {
-            changeCheckedRadioButton();
-            if(Math.abs(currentPosition) < 200) {
-                currentPosition -= 100;
-                slideOn(currentPosition, $('.slide'));
+            }, 1000);
+        }
 
-            } else {
-                currentPosition = 0;
-                slideOn(currentPosition, $('.slide'));
+        turnSlide(nextPosition) {
+            for (let i = 0; i < this.slides.length; i++) {
+                this.slides[i].style.left = nextPosition + "%";
             }
-        }, 9000);
-    }
-
-    function changeCheckedRadioButton() {
-        var radioButtons = $('input[type="radio"]');
-        var currentChecked = $('input[type="radio"].checked');
-        currentChecked.removeClass('checked');
-        var indexOfChecked = radioButtons.index(currentChecked);
-        var nextChecked;
-        var nextIndex = indexOfChecked + 1;
-        if(indexOfChecked < radioButtons.length - 1) {
-            nextChecked = radioButtons.get(nextIndex);
-        } else {
-            nextChecked = radioButtons.first();
         }
 
-        $(nextChecked).addClass('checked');
+        changeCheckedButton(id) {
+            const buttons = document.querySelectorAll('.carousel-control');
+
+            for (let i = 0; i < buttons.length; i++) {
+                if (buttons[i].className.indexOf('checked') !== -1) {
+                    buttons[i].className = buttons[i].className.replace(' checked', '');
+                }
+            }
+            let currentChecked = document.querySelector('#carousel-btn-' + id);
+            currentChecked.className = currentChecked.classList.add('checked');
+            this.previousChecked = id;
+        }
     }
 
-    launchCarousel();
+    const carousel = new Carousel();
+    carousel.addCarouselButtons();
+    carousel.launchCarousel();
 
-});
+}

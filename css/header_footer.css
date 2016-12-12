@@ -14,10 +14,6 @@ a:visited {
     color: pink;
 }
 
-header {
-    flex: 2;
-}
-
 #header-links-container {
     float: left;
     height: 70px;
@@ -318,7 +314,4 @@ footer {
     .share {
         margin-left: 5%;
     }
-
 }
-
-
