@@ -30,7 +30,7 @@ figcaption img {
 }
 
 #carousel {
-    
+    position: relative;
 }
 
 .slides-list {
@@ -38,6 +38,15 @@ figcaption img {
     margin: 0;
     padding: 0;
     width: 300%;
+}
+
+.slides-list::before, .slides-list::after {
+    display: table;
+    content: "";
+}
+
+.slides-list::after {
+    clear: both;
 }
 
 .slide {
@@ -51,13 +60,39 @@ figcaption img {
 
 .slide img {
     width: 100%;
+    vertical-align: middle;
 }
 
-
-
-
 #carousel-controls-container {
-    clear: both;
+    list-style-type: none;
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    height: 10.2%;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    border-top: 1px solid #a5a5a5;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.carousel-control {
+    margin: auto 5px;
+    display: block;
+    width: 7px;
+    height: 7px;
+    background: #a5a5a5;
+    border-radius: 50%;
+    
+}
+
+.carousel-control.checked {
+    background: #f14a58;
 }
 
 .main-button-container {
@@ -656,7 +691,9 @@ p.link-onhover a {
 }
 
 @media only screen and (min-width: 1024px) {
-   
+   #carousel-controls-container {
+       height: 9.5%;
+   }
     
     .item {
         width: 18.75%;
