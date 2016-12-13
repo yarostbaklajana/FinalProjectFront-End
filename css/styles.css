@@ -30,7 +30,7 @@ figcaption img {
 }
 
 #carousel {
-
+    
 }
 
 .slides-list {
@@ -44,16 +44,17 @@ figcaption img {
     width: 33.3%;
     float: left;
     position: relative;
-}
-
-.slide img[alt="black and white"], .slide img[alt="shoes"] {
-    width: 200%;
+    transition: left 1s ease-in-out;
+    left: 0;
+    overflow: hidden;
 }
 
 .slide img {
-    vertical-align: middle;
     width: 100%;
 }
+
+
+
 
 #carousel-controls-container {
     clear: both;
@@ -604,7 +605,6 @@ p.link-onhover a {
 
 
 @media only screen and (min-width: 768px) {
-
     
     .item {
         width: 26.66%;

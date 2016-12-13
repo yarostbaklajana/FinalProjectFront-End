@@ -9,6 +9,7 @@
     <script type="text/javascript" src="js/common/jquery-3.1.0.min.js"></script>
     <script type="text/javascript" src="js/dropdown_menu.js"></script>
     <script type="text/javascript" src="js/carousel.js" defer></script>
+    <script type="text/javascript" src="js/picturefill.js" defer></script>
     <script src="js/storage.js"></script>
 
     <link rel="stylesheet" href="css/fonts.css">
@@ -48,20 +49,29 @@
         </header>
         <div id="main-content">
             <div id="carousel">
-                <ul class="slides-list"> 
-                    <li class="slide">
-                        <img src="../img/mobile/items_in_carousel/1.png" alt="black and white"></img>
+                <ul class="slides-list "> 
+                    <li class="slide first">
+                        <picture>
+                            <source srcset="img/mobile/items_in_carousel/black_white_mobile.png" media="(max-width: 767px)"></source>
+                            <source srcset="img/mobile/items_in_carousel/black_white_tablet.png" media="(max-width: 1023px)"></source>
+                            <img src="img/mobile/items_in_carousel/black_white_desktop.png" alt="black and white"></img>
+                        </picture>
                     </li>
-                    <li class="slide">
-                        <img src="../img/mobile/items_in_carousel/1.png" alt="promo"></img>
+                    <li class="slide second">
+                        <picture>
+                            <source srcset="img/mobile/items_in_carousel/multiply_promo_mobile.png" media="(max-width: 767px)"></source>
+                            <source srcset="img/mobile/items_in_carousel/multiply_promo_tablet.png" media="(max-width: 1023px)"></source>
+                            <img src="img/mobile/items_in_carousel/multiply_promo_desktop.png" alt="black and white"></img>
+                        </picture>
                     </li>
-                    <li class="slide">
-                        <img src="../img/mobile/items_in_carousel/1.png" alt="shoes"></img>
+                    <li class="slide third">
+                        <picture>
+                            <source srcset="img/mobile/items_in_carousel/shoes_mobile.png" media="(max-width: 767px)"></source>
+                            <source srcset="img/mobile/items_in_carousel/shoes_tablet.png" media="(max-width: 1023px)"></source>
+                            <img src="img/mobile/items_in_carousel/shoes_desktop.png" alt="black and white"></img>
+                        </picture>
                     </li>
-
                 </ul>
-
-
                 <ul id="carousel-controls-container">
                 </ul>
             </div>

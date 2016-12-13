@@ -4,7 +4,7 @@
     class Carousel {
         constructor() {
             this.currentPosition = 0;
-            this.step = 100;
+            this.step = 33.3;
             this.previousChecked = 1;
             this.slides = document.querySelectorAll('.slide');
             this.carouselControlsContainer = document.getElementById('carousel-controls-container');
@@ -39,7 +39,7 @@
                     this.changeCheckedButton(1);
                 }
 
-            }, 1000);
+            }, 5000);
         }
 
         turnSlide(nextPosition) {
