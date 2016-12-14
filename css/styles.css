@@ -17,15 +17,16 @@ body {
     justify-content: space-between;
 }
 
+.main-page-content {
+    font-size: 10px;
+    flex: 2;
+}
+
 figure {
     margin: 0;
 }
 
 figure img {
-    vertical-align: middle;
-}
-
-figcaption img {
     vertical-align: middle;
 }
 
@@ -88,7 +89,7 @@ figcaption img {
     height: 7px;
     background: #a5a5a5;
     border-radius: 50%;
-    
+    cursor: pointer;
 }
 
 .carousel-control.checked {
@@ -96,13 +97,26 @@ figcaption img {
 }
 
 .main-button-container {
+    width: 90%;
+    margin: auto 5%;
     text-align: center;
     clear: both;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+
+
 .main-button {
+    background: transparent;
+    outline: none;
     height: 60px;
     width: 215px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #a5a5a5;
+    cursor: pointer;
 }
 
 .banners {
@@ -113,12 +127,15 @@ figcaption img {
     
 }
 
-.nike-red-banner {
+
+
+.nike-red-banner, .adidas-blue-banner {
+    flex-shrink: 2;
     width: 100%;
 }
 
 
-.sale-banner, .caps-and-hats-banner {
+.sale-banner, .caps-and-hats-banner, .repair-patches-banner, .bag-banner {
     display: none;
 }
 
@@ -129,6 +146,7 @@ figcaption img {
 
 .heading {
     text-align: center;
+    font-size: 14px;
 }
 
 .item {
@@ -355,284 +373,77 @@ p.link-onhover a {
 
 /*for catalog */
 
-#bag-heading {
-    width: 89.3%;
-    margin: 0 20px;
-}
-
-#bag-body .empty-bag-message,
-#bag-body .empty-purchased-message {
-    display: none;
-    width: 100%;
-    margin: 20px auto;
-    text-align: left;
-    color: #f14a58;
-}
-
-#bag-heading h1 {
-    font-size: 16px;
-    margin-left: 20px;
-}
-
-#bag-body {
-    width: 89.3%;
-    margin: 0 20px;
-}
-
-#bag-body .item-in-bag {
-    margin: 15px 0 35px 0;
-}
-
-.item-in-bag .image-area, .item-in-bag .price {
-    width: 50%;
-    float: left;
-    position: relative;
-}
-
-.item-in-bag .image-area img, .item-in-bag .price p {
-    margin: 0;
-    width: 100%;
-}
-
-.item-in-bag .about {
-    font-size: 10px;
-    width: 50%;
-    float: right;
-}
-
-.item-in-bag .about h3,
-.item-in-bag .about p,
-.item-in-bag .about button {
-    margin-left: 10px;
-    line-height: 10px;
-
-}
-
-.item-in-bag .price {
-    text-align: center;
-    float: none;
-    font-size: 12px;
-}
-
-.item-in-bag .about h3 {
-    font-size: 12px;
-    line-height: 18px;
-}
-
-#main-content {
-    flex: 1;
-}
-
-#main-content .item-in-bag .about .remove-item-btn {
+.page-heading {
     font-family: "Open Sans";
-    font-weight: bold;
-    margin-top: 20px;
-    color: #f14a58;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 10px;
-}
-
-#main-content .item-in-bag .about .remove-item-btn:hover {
-    text-decoration: underline;
-}
-
-.item-in-bag {
-    transition: all .5s ease-in-out;
-
-}
-
-.disappear {
-    opacity: 0;
-    transform: scale(0);
-}
-
-.cover {
-    display: none;
-    opacity: 0;
-}
-
-.target-delete-cover {
-    position: absolute;
-    width: 50%;
-    top: 30%;
-    left: 25%;
-    z-index: 20;
-}
-
-.target-delete-filter {
-    -webkit-filter: blur(10px);
-    opacity: 0.5;
-}
-
-.shopping-bag-reminder {
-    height: 55px;
-    font-size: 10px;
-    background-color: #f7f7f7;
-    border-top: 1px solid #e5e5e5;
-}
-
-.shopping-bag-reminder p {
-    line-height: 17px;
-    margin: 0;
-    text-align: center;
-}
-
-.shopping-bag-reminder p:first-child {
-    margin-top: 10px;
-}
-
-#shopping-bag-buttons-container .empty-bag {
-    font-size: 10px;
-    border: none;
-    padding: 0;
-    margin-left: 20px;
-}
-
-#shopping-bag-buttons-container article {
-    float: left;
-    height: 115px;
-}
-
-#shopping-bag-buttons-container .clear-bag-btn-container {
-    width: 30%;
-    line-height: 100px;
-}
-
-#shopping-bag-buttons-container .buy-items-btn-container {
-    width: 40%;
-    line-height: 100px;
-    text-align: center;
-}
-
-#shopping-bag-buttons-container .buy-items-btn-container button {
-    height: 60px;
-    width: 140px;
-    line-height: 60px;
-
-}
-
-#shopping-bag-buttons-container .total-cost-container {
-    width: 30%;
-    text-align: right;
-
-}
-
-#shopping-bag-buttons-container .total-cost-container p {
-    font-size: 10px;
-    margin: 5px 20px 0 0;
-}
-
-#shopping-bag-buttons-container .total-cost-container p:first-child {
-    margin-top: 30px;
-}
-
-#shopping-bag-buttons-container .total-cost-container .total-price {
     font-size: 14px;
-    font-weight: bold;
+    margin-left: 5%;
 }
+
+.notice {
+    font-size: 10px;
+    background: #e5e5e5;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.notice p {
+    margin: auto 5%;
+}
+
+.clear-bag-button {
+    border: none;
+    background: transparent;
+}
+
+
 
 /*for shopping bag */
 
-.back-to-catalog {
-    width: 89.3%;
-    margin: 0 auto;
-    height: 65px;
-    line-height: 65px;
-}
-
-.back-to-catalog a {
-
-    font-family: 'Open Sans';
+.back-to-catalog-link {
+    color: black;
     text-decoration: none;
-    font-size: 16px;
-    line-height: 50px;
-    font-weight: bold;
 }
 
-#item {
-    width: 89.3%;
-    margin: 0 20px;
-
-}
-
-#item .item-big-container img {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-#item .thumbnail-container {
-    position: relative;
-    white-space: nowrap;
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
-
-
-#item .thumbnail {
-    width: 32.835%;
-    margin-right: 20px;
-    cursor: pointer;
-}
-
-#item .chosen-thumbnail {
-    -webkit-filter: brightness(80%);
-    filter: brightness(80%);
-}
-
-#item p {
-    font-size: 14px;
-    text-align: center;
-    line-height: 30px;
-}
-
-#item h2 {
-    font-size: 20px;
-    text-align: center;
-}
-
-#item .info {
+.item-description {
+    font-family: "Open Sans";
+    width: 90%;
+    margin: auto 5%;
     font-style: italic;
-    font-family: 'Times New Roman';
-}
-
-#item input[type="radio"] {
-    display: none;
-    outline: none;
-
-}
-
-#item input[type="radio"] + .param-label {
-    margin: 0 10px 20px 10px;
-    display: inline-block;
-    width: 145px;
-    height: 60px;
-    background: white;
-    border: 1px solid #e5e5e5;
+    line-height: 30px;
     text-align: center;
-    line-height: 60px;
+    font-size: 10px;
 }
 
-#item input[type="radio"]:checked + .param-label {
-    background: #e5e5e5;
+.item-property-buttons-container {
+    width: 90%;
+    margin: auto 5%;
+    display: flex;
 }
 
-#item .first, #item .third {
-    float: left;
-    text-align: right;
+.prop-heading {
+    font-family: "Open Sans";
+    font-size: 10px;
+    font-weight: normal;
+    width: 40px;
 }
 
-#item .second {
-    float: right;
-    text-align: left;
+.property-button {
+    font-size: 12px;
+    font-weight: bold;
+    box-sizing: border-box;
+    width: 80px;
+    height: 40px;
+    margin: auto calc((100% - 80px * 3 - 40px)/6);
+    background: transparent;
+    border: 1px solid #a5a5a5;
 }
 
-#item .checked-size, #item .checked-color {
-    background-color: #e5e5e5;
-}
+
+
+
+
+
+
 
 /*for item-details */
 
@@ -640,7 +451,10 @@ p.link-onhover a {
 
 
 @media only screen and (min-width: 768px) {
-    
+    #carousel-controls-container {
+        height: 8%;
+    }
+
     .item {
         width: 26.66%;
     }
@@ -650,44 +464,37 @@ p.link-onhover a {
         margin-right: 5%;
     }
 
-    .nike-red-banner {
-        width: 66%;
+    .nike-red-banner, .adidas-blue-banner {
         border-right: 1px solid #c9cbcd;
+        width: 66.7%;
     }
 
-    .sale-banner {
+    .sale-banner, .repair-patches-banner {
         display: block;
-        width: 34%;
+        width: 33.3%;
     }
     
-
-    #bag-body {
-        width: 89.5%;
+    .notice p {
+        display: inline;
+        margin: 0;
     }
 
-    #item {
-        width: 89.5%;
+    .item-description {
+        width: 60%;
+        margin: auto auto;
+    }
+    
+    .item-property-buttons-container {
+        justify-content: center;
+        align-items: center;
     }
 
+    .property-button {
+        margin: 10px;
+    }
    
 
-    .buy-items-btn-container #buy-items {
-        width: 260px !important;
-        height: 70px !important;
-        font-size: 24px;
-    }
-
-    .shopping-bag-reminder {
-        height: 40px
-    }
-
-    .shopping-bag-reminder p {
-        display: inline;
-        font-size: 11px;
-        font-family: 'Open Sans';
-        font-weight: bold;
-        line-height: 40px;
-    }
+   
 }
 
 @media only screen and (min-width: 1024px) {
@@ -708,12 +515,16 @@ p.link-onhover a {
         display: none;
     }
 
-    .caps-and-hats-banner {
+    .caps-and-hats-banner, .bag-banner {
         display: block;
     }
 
-    .nike-red-banner, .caps-and-hats-banner {
+    .nike-red-banner, .caps-and-hats-banner, .adidas-blue-banner {
         width: 50%;
+    }
+
+    .bag-banner, .repair-patches-banner {
+        width: 25%;
     }
 
 

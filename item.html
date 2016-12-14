@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Item Details</title>
@@ -11,190 +12,146 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header_footer.css">
 </head>
+
 <body>
-    <main class="container">
+    <div class="container">
         <header>
-            <div id="logo"><img src="img/mobile/icons/logo.png"></div>
-            <div id="logo-full"><img alt="logo" src="img/mobile/icons/logo_full.png"></div>
-            <div id="tools">
-                <a href="#" class="sign-up">E-mail sign up</a>
+            <div class="logo"></div>
+            <div id="header-links-container">
+                <a href="#" class="sign-up-link">E-mail sign up</a>
                 <a href="shopping_bag.html">Bag</a>
                 <span class="total-price"></span>
-                (<span id="total-count"></span>)
+                <span id="total-count"></span>
             </div>
             <button type="button" id="dropdown-button" class="dropdown-menu-button"><img src="img/mobile/icons/nav_open.png"
-                                                                                         alt="menu"></button>
+                                                                                 alt="menu"></button>
             <button type="button" id="close-dropdown" class="dropdown-menu-button"><img
-                    src="img/mobile/icons/menu_close.png"></button>
-            <div class="clearfix"></div>
-            <nav>
-                <div id="dropdown-menu">
-                    <ul>
-                        <li><a href="#">Women</a></li>
-                        <li><a href="#">Men</a></li>
-                        <li><a href="#">Handbags</a></li>
-                        <li><a href="#">Accesories</a></li>
-                        <li><a href="#">Sale</a></li>
-                        <li><a href="#">New Arrivals</a></li>
-                        <li><a href="#">Clearance</a></li>
-                        <li><a href="#">Store Locator</a></li>
-                        <div class="clearfix"></div>
-                    </ul>
-                    <input class="search" placeholder="Style Name">
-                    <button class="search-button" type="button"><img alt="search" src="img/mobile/icons/search.png"></button>
-                    <div class="clearfix"></div>
-                </div>
+            src="img/mobile/icons/menu_close.png"></button>
+            <nav id="dropdown-menu">
+                <ul class="navigation-links-container">
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Handbags</a></li>
+                    <li><a href="#">Accesories</a></li>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Clearance</a></li>
+                    <li class="last"><a href="#">Store Locator</a></li>
+                </ul>
+                <input class="search-input" placeholder="Style Name">
+                <button class="search-button" type="button"><img alt="search" src="img/mobile/icons/search.png"></button>
             </nav>
         </header>
-        <hr>
-        <section id="main-content">
-            <article class="back-to-catalog">
-                <h1>&lt; Back to catalog</h1>
-            </article>
-            <hr>
-            <article id="item">
-                <figure>
-                    <div class="item-big-container">
-                        <img src="img/mobile/item/item.png" alt="item">
-                    </div>
-                    <div class="thumbnail-container">
-                        <img class="thumbnail" src="img/mobile/item/th_item.png" alt="item thumbnail">
-                        <img class="thumbnail" src="img/mobile/item/th_item.png" alt="item thumbnail">
-                        <img class="thumbnail" src="img/mobile/item/th_item.png" alt="item thumbnail">
 
-                    </div>
-                    <div class="clearfix"></div>
-                    <figcaption>
-                        <h2>Dark classic fit suit</h2>
-                        <p class="price">&pound;180.60</p>
-                        <p class="info">Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs and a subtle stripe pattern throughout. </p>
-                    </figcaption>
+        <main id="main-page-content">
+            <h1 class="page-heading">
+                <a class="back-to-catalog-link" href="catalog.html">&lt; Back to catalog</a>
+            </h1>
 
-                    <figcaption class="size-params">
-                        <h2>Size</h2>
-                            <div class="parameters-button-container first">
-                                <button class="params" type="button">UK 52</button>
-                            </div>
-                            <div class="parameters-button-container second">
-                                <button class="params" type="button">UK 54</button>
-                            </div>
-                            <div class="parameters-button-container third">
-                                 <button class="params" type="button">UK 56</button>
-                            </div>
-                    </figcaption>
-                    <div class="clearfix"></div>
-                    <figcaption class="color-params">
-                        <h2>Color</h2>
-                        <div class="parameters-button-container">
-                            <button  class="params" type="button">Black</button>
-                        </div>
-                        <div class="parameters-button-container">
-                            <button  class="params" type="button">Blue</button>
-                        </div>
-                    </figcaption>
+            <div class="item-galery">
+                <img class="picture front" src="img/mobile/item/th_item.png" alt="item">
+                <img class="picture" src="img/mobile/item/th_item.png" alt="item thumbnail">
+                <img class="picture" src="img/mobile/item/th_item.png" alt="item thumbnail">
+                <img class="picture" src="img/mobile/item/th_item.png" alt="item thumbnail">
+            </div>
+            <h3 class="heading">Dark classic fit suit</h3>
+            <p class="price">&pound;180.60</p>
+            <p class="item-description">Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs and a subtle
+                stripe pattern throughout. </p>
 
-                    <div class="clearfix"></div>
-                </figure>
-            </article>
-            <article id="central-button">
-                <button type="button">Add to bag</button>
-            </article>
-            <hr>
-            <article id="banners">
-                <figure class="left-item-banner">
-                    <figcaption class="left-item-name">Adidas Blue<span class="status">For men</span></figcaption>
-                    <img src="img/mobile/banners/adidas.png" alt="shoes">
-                </figure>
-                <figure class="right-item-banner">
-                    <figcaption class="right-item-name">Repair Patches<span class="status">&pound;150.50</span> </figcaption>
-                    <img src="img/mobile/banners/jeans.png">
-                </figure>
-                <div class="clearfix"></div>
-            </article>
 
-        </section>
-        <hr>
+            <div class="item-property-buttons-container">
+                    <h5 class="prop-heading">Size</h5>
+                    <button class="property-button" type="button">UK 52</button>
+                    <button class="property-button" type="button">UK 54</button>
+                    <button class="property-button" type="button">UK 56</button>
+            </div>
+
+            <div class="item-property-buttons-container">
+                <h5 class="prop-heading">Color</h5>
+                <button class="property-button" type="button">Black</button>
+                <button class="property-button" type="button">Blue</button>
+            </div>
+
+            <div class="main-button-container">
+                <button type="button" class="main-button">Add to bag</button>
+            </div>
+            
+            <div class="banners">
+                <img class="adidas-blue-banner" src="img/mobile/banners/adidas_blue.png" alt="adidas blue">
+                <img class="repair-patches-banner" src="img/mobile/banners/repair_patches.png" alt="repair patches">
+                <img class="bag-banner" src="img/mobile/banners/sale.png" alt="sale">
+            </div>
+
+        </main>
         <footer>
-            <section id="additional">
-                <article>
-                    <ul>
-                        <h3>Quick Links</h3>
-                        <li><a href="#">Store locator</a></li>
-                        <li><a href="#">Gift cards</a></li>
-                        <li><a href="#">Size guide</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Support</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <ul>
-                        <h3>Customer Care</h3>
-                        <li><a href="#">Customer service</a></li>
-                        <li><a href="#">Track my order</a></li>
-                        <li><a href="#">Return policy</a></li>
-                        <li><a href="#">Shipping & delivery</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Careers</a></li>
-                    </ul>
-                </article>
-                <div class="clearfix"></div>
+            <div class="customer-navigation">
+                <h3>Quick Links</h3>
+                <ul class="links-list">
+                    <li><a href="#">Store locator</a></li>
+                    <li><a href="#">Gift cards</a></li>
+                    <li><a href="#">Size guide</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="customer-navigation">
+                <h3>Customer Care</h3>
+                <ul class="links-list">
+                    <li><a href="#">Customer service</a></li>
+                    <li><a href="#">Track my order</a></li>
+                    <li><a href="#">Return policy</a></li>
+                    <li><a href="#">Shipping & delivery</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+
+            <section class="contact-info">
+                <h3>Questions</h3>
+                <p><img src="img/mobile/icons/ico_tw.png" alt="icon"> Tweet us <span class="temp">@template</span></p>
+            </section>
+            <section class="contact-info">
+                <h3>Order by phone</h3>
+                <p>8-800-409-47-12</p>
             </section>
 
-            <section id="support">
-                <article>
-                    <h3>Questions</h3>
+            <div class="delivery-service-advertisement">
+                <p>We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days.</p>
+            </div>
 
-                    <p><img src="img/mobile/icons/ico_tw.png" alt="icon">Tweet us <span class="temp">@template</span></p>
-                </article>
-                <article>
-                    <h3>Order by phone</h3>
+            <ul class="footer-navigation">
+                <li><a>Legal notice</a></li>
+                <li><a>Privacy policy</a></li>
+                <li><a>Site map</a></li>
+            </ul>
 
-                    <p>8-800-409-47-12</p>
-                </article>
-                <article class="follow">
-                    <p class="social-fb"><img src="img/mobile/icons/soc_f.png" alt="facebook"></p>
+            <div class="follow-buttons-container">
+                <button class="follow-button-facebook"></button>
+                <button class="follow-button-twitter"></button>
+            </div>
 
-                    <p class="social-tw"><img src="img/mobile/icons/soc_tw.png"></p>
-                </article>
-                <div class="clearfix"></div>
-            </section>
+            <div class="about-site-info">
+                <div class="trademark">
+                    <span>&copy; 2010-2015, The Template Group inc.</span>
+                </div>
 
-            <section id="social">
-                <nav class="footer-navigation">
-                    <p>Legal notice</p>
 
-                    <p>Privacy policy</p>
+                <div class="share">
+                    <span>Share</span>
+                    <button type="button" class="share-button">1 437</button>
+                </div>
 
-                    <p>Site map</p>
-                </nav>
-                <article class="follow">
-                    <p class="social-fb"><img src="img/mobile/icons/soc_f.png" alt="facebook"></p>
 
-                    <p class="social-tw"><img src="img/mobile/icons/soc_tw.png"></p>
-                </article>
-            </section>
-            <div class="clearfix"></div>
-
-            <section id="trademark">
-                <article class="copyrights">
-                    <p>&copy; 2010-2015, The Template Group inc.</p>
-                </article>
-                <article class="share">
-                    <p>Share
-                        <button type="button">1 437</button>
-                    </p>
-                </article>
-                <nav class="footer-navigation">
-                    <p>Legal notice</p>
-
-                    <p>Privacy policy</p>
-
-                    <p>Site map</p>
-                </nav>
-                <div class="clearfix"></div>
-            </section>
+                <ul class="footer-navigation">
+                    <li><a>Legal notice</a></li>
+                    <li><a>Privacy policy</a></li>
+                    <li><a>Site map</a></li>
+                </ul>
+            </div>
 
         </footer>
-    </main>
+    </div>
 </body>
+
 </html>

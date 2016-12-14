@@ -17,22 +17,19 @@
 <body>
     <main class="container">
     <header>
-        <div id="logo-short"><img src="img/mobile/icons/logo.png"></div>
-        <div id="logo-full"><img alt="logo" src="img/mobile/icons/logo_full.png"></div>
-        <div id="header-links-container">
-            <a href="#" class="sign-up">E-mail sign up</a>
-            <a href="shopping_bag.html">Bag</a>
-            <span class="total-price"></span>
-            (<span id="total-count"></span>)
-        </div>
-        <button type="button" id="dropdown-button" class="dropdown-menu-button"><img src="img/mobile/icons/nav_open.png"
-                                                                                     alt="menu"></button>
-        <button type="button" id="close-dropdown" class="dropdown-menu-button"><img
-                src="img/mobile/icons/menu_close.png"></button>
-        <div class="clearfix"></div>
-        <nav>
-            <div id="dropdown-menu">
-                <ul>
+            <div class="logo"></div>
+            <div id="header-links-container">
+                <a href="#" class="sign-up-link">E-mail sign up</a>
+                <a href="shopping_bag.html">Bag</a>
+                <span class="total-price"></span>
+                <span id="total-count"></span>
+            </div>
+            <button type="button" id="dropdown-button" class="dropdown-menu-button"><img src="img/mobile/icons/nav_open.png"
+                                                                                 alt="menu"></button>
+            <button type="button" id="close-dropdown" class="dropdown-menu-button"><img
+            src="img/mobile/icons/menu_close.png"></button>
+            <nav id="dropdown-menu">
+                <ul class="navigation-links-container">
                     <li><a href="#">Women</a></li>
                     <li><a href="#">Men</a></li>
                     <li><a href="#">Handbags</a></li>
@@ -41,14 +38,11 @@
                     <li><a href="#">New Arrivals</a></li>
                     <li><a href="#">Clearance</a></li>
                     <li class="last"><a href="#">Store Locator</a></li>
-                    <div class="clearfix"></div>
                 </ul>
                 <input class="search-input" placeholder="Style Name">
                 <button class="search-button" type="button"><img alt="search" src="img/mobile/icons/search.png"></button>
-                <div class="clearfix"></div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
 
         <hr>
         <section id="main-content">
@@ -198,21 +192,20 @@
             </article>
             <hr>
         </section>
-    <footer>
-        <section id="footer-support-links-container">
-            <article>
-                <ul>
-                    <h3>Quick Links</h3>
+     <footer>
+            <div class="customer-navigation">
+                <h3>Quick Links</h3>
+                <ul class="links-list">
                     <li><a href="#">Store locator</a></li>
                     <li><a href="#">Gift cards</a></li>
                     <li><a href="#">Size guide</a></li>
                     <li><a href="#">About us</a></li>
                     <li><a href="#">Support</a></li>
                 </ul>
-            </article>
-            <article>
-                <ul>
-                    <h3>Customer Care</h3>
+            </div>
+            <div class="customer-navigation">
+                <h3>Customer Care</h3>
+                <ul class="links-list">
                     <li><a href="#">Customer service</a></li>
                     <li><a href="#">Track my order</a></li>
                     <li><a href="#">Return policy</a></li>
@@ -220,79 +213,52 @@
                     <li><a href="#">Contact us</a></li>
                     <li><a href="#">Careers</a></li>
                 </ul>
-            </article>
-            <div class="clearfix"></div>
-        </section>
+            </div>
 
-        <hr class="line-hidden-in-tablet">
-
-        <section id="contact-info-container">
-            <article>
+            <section class="contact-info">
                 <h3>Questions</h3>
-
                 <p><img src="img/mobile/icons/ico_tw.png" alt="icon"> Tweet us <span class="temp">@template</span></p>
-            </article>
-            <article>
+            </section>
+            <section class="contact-info">
                 <h3>Order by phone</h3>
-
                 <p>8-800-409-47-12</p>
-            </article>
-            <article class="delivery-service-advertisement">
-                <p>We have delivery service which operates in 23 major European cities. Delivery time - 3-5 days.</p>
+            </section>
 
-            </article>
-            <article class="follow-buttons-container">
-                <p class="social-fb"><img src="img/mobile/icons/soc_f.png" alt="facebook"></p>
+            <div class="delivery-service-advertisement">
+                <p>We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days.</p>
+            </div>
 
-                <p class="social-tw"><img src="img/mobile/icons/soc_tw.png"></p>
-            </article>
-            <div class="clearfix"></div>
-        </section>
+            <ul class="footer-navigation">
+                <li><a>Legal notice</a></li>
+                <li><a>Privacy policy</a></li>
+                <li><a>Site map</a></li>
+            </ul>
 
-        <hr class="line-hidden-in-tablet">
+            <div class="follow-buttons-container">
+                <button class="follow-button-facebook"></button>
+                <button class="follow-button-twitter"></button>
+            </div>
 
-        <section id="social">
-            <nav class="footer-navigation">
-                <p>Legal notice</p>
+            <div class="about-site-info">
+                <div class="trademark">
+                    <span>&copy; 2010-2015, The Template Group inc.</span>
+                </div>
 
-                <p>Privacy policy</p>
 
-                <p>Site map</p>
-            </nav>
-            <article class="follow-buttons-container">
-                <p class="social-fb"><img src="img/mobile/icons/soc_f.png" alt="facebook"></p>
+                <div class="share">
+                    <span>Share</span>
+                    <button type="button" class="share-button">1 437</button>
+                </div>
 
-                <p class="social-tw"><img src="img/mobile/icons/soc_tw.png"></p>
-            </article>
-            <div class="clearfix"></div>
-        </section>
-        <div class="clearfix"></div>
 
-        <hr>
+                <ul class="footer-navigation">
+                    <li><a>Legal notice</a></li>
+                    <li><a>Privacy policy</a></li>
+                    <li><a>Site map</a></li>
+                </ul>
+            </div>
 
-        <section id="about-site-container">
-            <article class="trademark">
-                <p>&copy; 2010-2015, The Template Group inc.</p>
-            </article>
-
-            <nav class="footer-navigation">
-                <p>Legal notice</p>
-
-                <p>Privacy policy</p>
-
-                <p>Site map</p>
-            </nav>
-
-            <article class="share">
-                <p>Share
-                    <button type="button">1 437</button>
-                </p>
-            </article>
-
-            <div class="clearfix"></div>
-        </section>
-
-    </footer>
+        </footer>
     </main>
 
     <script id="item-tmpl" type="text/x-jquery-tmpl">
