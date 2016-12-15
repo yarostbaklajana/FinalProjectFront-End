@@ -103,6 +103,9 @@ figure img {
     clear: both;
     display: flex;
     align-items: center;
+}
+
+.centered-buttons {
     justify-content: center;
 }
 
@@ -130,9 +133,12 @@ figure img {
 
 
 
-.nike-red-banner, .adidas-blue-banner {
-    flex-shrink: 2;
+.first-banner-image {
     width: 100%;
+}
+
+.tablet-visible-banner, .desktop-visible-banner {
+    display: none;
 }
 
 
@@ -145,35 +151,24 @@ figure img {
 }
 
 
-.heading {
+.name {
     text-align: center;
     font-size: 14px;
 }
 
-.item {
+.item-short-overview-block {
     width: 42.5%;
     float: left;
 }
 
-.item.first {
-    margin: auto 2.5% auto 5%;
-}
 
-.item.second {
-    margin: auto 5% auto 2.5%;
-}
-
-.item img {
+.item-short-overview-block img {
     width: 100%;
 }
 
 .price {
    font-size: 10px;
    text-align: center; 
-}
-
-.item.third, .item.fourth {
-    display: none;
 }
 
 p.link-onhover {
@@ -396,7 +391,7 @@ p.link-onhover a {
     background: transparent;
 }
 
-.bag-main-buttons-container {
+.justified-buttons {
     justify-content: space-between;
 }
 
@@ -437,13 +432,13 @@ p.link-onhover a {
     border: 1px solid #a5a5a5;
 }
 
-.item-galery, .item-overview {
+.item-images-bar, .item-detailed-description-container{
     width: 90%;
     margin: auto 5%;
     
 }
 
-.item-galery {
+.item-images-bar {
     font-size: 0;
 }
 
@@ -469,21 +464,16 @@ p.link-onhover a {
         height: 8%;
     }
 
-    .item {
+    .item-short-overview-block {
         width: 26.66%;
     }
 
-    .item.third {
-        display: block;
-        margin-right: 5%;
-    }
-
-    .nike-red-banner, .adidas-blue-banner {
+    .first-banner-image {
         border-right: 1px solid #c9cbcd;
         width: 66.7%;
     }
 
-    .sale-banner, .repair-patches-banner {
+    .tablet-visible-banner {
         display: block;
         width: 33.3%;
     }
@@ -524,42 +514,34 @@ p.link-onhover a {
        height: 9.5%;
    }
     
-    .item {
+    .item-short-overview-block {
         width: 18.75%;
     }
 
-    .item.fourth {
-        display: block;
-        margin-right: 5%;
-    }
-
-    .sale-banner {
+    .tablet-visible-banner {
         display: none;
     }
 
-    .caps-and-hats-banner, .bag-banner {
-        display: block;
-    }
-
-    .nike-red-banner, .caps-and-hats-banner, .adidas-blue-banner {
+    .first-banner-image {
         width: 50%;
     }
 
-    .bag-banner, .repair-patches-banner {
-        width: 25%;
+    .desktop-visible-banner {
+        display: block;
+        width: 50%;
     }
 
 
     /* carousel desktop */
    
-   .item-galery, .item-overview {
+   .item-images-bar, .item-detailed-description-container {
        width: 42.5%;
        float: left;
        margin: 0;
        margin-left: 5%;
    }
 
-   .item-overview {
+   .item-detailed-description-container {
        float: right;
        margin-right: 5%;
    }
