@@ -103,7 +103,7 @@ figure img {
     clear: both;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 
@@ -120,6 +120,7 @@ figure img {
 }
 
 .banners {
+    width: 100%;
     display: flex;
     align-items: center;
     border-top: 1px solid #c9cbcd;
@@ -395,7 +396,9 @@ p.link-onhover a {
     background: transparent;
 }
 
-
+.bag-main-buttons-container {
+    justify-content: space-between;
+}
 
 /*for shopping bag */
 
@@ -406,8 +409,6 @@ p.link-onhover a {
 
 .item-description {
     font-family: "Open Sans";
-    width: 90%;
-    margin: auto 5%;
     font-style: italic;
     line-height: 30px;
     text-align: center;
@@ -415,8 +416,6 @@ p.link-onhover a {
 }
 
 .item-property-buttons-container {
-    width: 90%;
-    margin: auto 5%;
     display: flex;
 }
 
@@ -438,8 +437,23 @@ p.link-onhover a {
     border: 1px solid #a5a5a5;
 }
 
+.item-galery, .item-overview {
+    width: 90%;
+    margin: auto 5%;
+    
+}
 
+.item-galery {
+    font-size: 0;
+}
 
+.front-item-picture {
+    width: 100%;
+}
+
+.item-thumbnail {
+    width: 33.33%;
+}
 
 
 
@@ -493,6 +507,14 @@ p.link-onhover a {
         margin: 10px;
     }
    
+   .front-item-picture {
+       width: 75%;
+       float: left;
+   }
+
+   .item-thumbnail {
+       width: 25%;
+   }
 
    
 }
@@ -530,6 +552,35 @@ p.link-onhover a {
 
     /* carousel desktop */
    
+   .item-galery, .item-overview {
+       width: 42.5%;
+       float: left;
+       margin: 0;
+       margin-left: 5%;
+   }
+
+   .item-overview {
+       float: right;
+       margin-right: 5%;
+   }
+
+   .front-item-picture {
+       width: 100%;
+       clear: both;
+   }
+
+   .item-thumbnail {
+       width: 33.33%;
+   }
+
+   .item-description {
+       width: 100%;
+       text-align: justify;
+   }
+
+   .item-property-buttons-container {
+       justify-content: flex-start;
+   }
 
     /*catalog desktop */
     #catalog-body {
