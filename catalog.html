@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/header_footer.css">
 </head>
 <body>
-    <main class="container">
+    <div class="container">
     <header>
             <div class="logo"></div>
             <div id="header-links-container">
@@ -44,27 +44,25 @@
             </nav>
         </header>
 
-        <hr>
-        <section id="main-content">
-            <article id="filters">
-                <div class="filters-select">
+        <main id="main-page-content">
 
-                    <label for="fashion-select">Fashion</label>
-                    <select id="fashion-select" class="first">
-                        <option value="filter">Casual style</option>
+                <div class="selecting-filters-container">
+
+                    <select class="filter-selection">
+                        <option disabled="disabled" value="filter">Casual style</option>
                         <option value="filter">New look</option>
                         <option value="filter">Sport</option>
                         <option value="filter">Vintage</option>
                         <option value="filter">Class</option>
                     </select>
 
-                    <select>
+                    <select class="filter-selection"> 
                         <option disabled="disabled" selected="selected">Product type</option>
                         <option value="filter">Coats</option>
                         <option value="filter">Dresses</option>
                         <option value="filter">Jersee</option>
                     </select>
-                    <select>
+                    <select class="filter-selection">
                         <option disabled="disabled" selected="selected">Color</option>
                         <option value="filter">Black</option>
                         <option value="filter">Blue</option>
@@ -72,16 +70,14 @@
                         <option value="filter">Green</option>
                         <option value="filter">Goldeb</option>
                     </select>
-                    <label for="brand-select">Brand</label>
-                    <select id="brand-select">
+                    <select class="filter-selection">
                         <option value="filter">Antipodium</option>
                         <option value="filter">Adidas</option>
                         <option value="filter">New Balance</option>
                         <option value="filter">River Island</option>
                     </select>
 
-                    <label for="size-select">Size</label>
-                    <select id="size-select">
+                    <select class="filter-selection">
                         <option value="filter">UK 18</option>
                         <option value="filter">UK 18L</option>
                         <option value="filter">UK 20</option>
@@ -90,108 +86,184 @@
                         <option value="filter">UK 22</option>
                     </select>
 
-                    <select class="last">
+                    <select class="filter-selection">
                         <option disabled="disabled" selected="selected">Price range</option>
                         <option value="filter">UK 18</option>
                         <option value="filter">UK 18L</option>
                         <option value="filter">UK 20</option>
                     </select>
-                    <div class="clearfix"></div>
                 </div>
 
-                <ul class="item-properties">
-                    <li><span class="item-property not-selected-property">Not selected,</span></li>
-                    <li><span class="item-property not-selected-property">Not selected,</span></li>
-                    <li><span class="item-property not-selected-property">Not selected,</span></li>
-                    <li><span class="item-property not-selected-property">Not selected,</span></li>
-                    <li><span class="item-property not-selected-property">Not selected,</span></li>
-                    <li><span class="item-property not-selected-property">Not selected</span></li>
-                    <button class="filter-btn" type="button"><img src="img/mobile/icons/filter.png"></button>
+                <ul class="selected-item-properties">
+                    <li class="selected-property">Not selected</li>
+                    <li class="selected-property">Not selected</li>
+                    <li class="selected-property">Not selected</li>
+                    <li class="selected-property">Not selected</li>
+                    <li class="selected-property">Not selected</li>
+                    <li class="selected-property">Not selected</li>
                 </ul>
-                <ul class="dropdown-filters">
+                <button class="showing-filters-button" type="button"><img src="img/mobile/icons/filter.png"></button>
+
+                <div class="dropdown-filters">
                     <h2 class="heading">Drag and select</h2>
                     <h5>Fashion</h5>
-                    <li class="swipe-line">
-                        <p class="not-selected-property"><span>Not selected</span></p>
-                        <p href="#"><span>Casual style</span></p>
-                        <p><span>New look</span></p>
-                        <p><span>Sport</span></p>
-                        <p><span>Vintage</span></p>
-                        <p><span>Class</span></p>
-                    </li>
+                    <ul class="list-of-filters">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                     <h5>Product type</h5>
-                    <li class="swipe-line">
-                        <p class="not-selected-property"><span>Not selected</span></p>
-                        <p><span>Coats &amp; Jackets</span></p>
-                        <p><span>Dresses</span></p>
-                        <p><span>Jersee</span></p>
-                    </li>
+                    <ul class="list-of-filters">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                     <h5>Color</h5>
-                    <li class="swipe-line">
-                        <p class="not-selected-property"><span>Not selected</span></p>
-                        <p><span>Black</span></p>
-                        <p><span>Blue</span></p>
-                        <p><span>Red</span></p>
-                        <p><span>Green</span></p>
-                        <p><span>Golden</span></p>
-                    </li>
+                    <ul class="list-of-filters">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                     <h5>Brand</h5>
-                    <li class="swipe-line">
-                        <p class="not-selected-property"><span>Not selected</span></p>
-                        <p><span>Antipodium</span></p>
-                        <p><span>Adidas</span></p>
-                        <p><span>New Balance</span></p>
-                        <p><span>River Island</span></p>
-                    </li>
+                    <ul class="list-of-filters">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                     <h5>Size</h5>
-                    <li class="swipe-line">
-                        <p class="not-selected-property"><span>Not selected</span></p>
-                        <p><span>UK 18</span></p>
-                        <p><span>UK 18L</span></p>
-                        <p><span>UK 20</span></p>
-                        <p><span>UK 20L</span></p>
-                        <p><span>UK 20S</span></p>
-                        <p><span>UK 22</span></p>
-                    </li>
+                    <ul class="list-of-filters">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                     <h5>Price range</h5>
-                    <li class="swipe-line">
-                        <p class="not-selected-property"><span>Not selected</span></p>
-                        <p><span>To &pound;99</span></p>
-                        <p><span>&pound;100-&pound;299</span></p>
-                        <p><span>From &pound;300</span></p>
-                    </li>
-                </ul>
-            </article>
+                    <ul class="list-of-filters">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
 
-            <hr>
-
-           <section id="catalog-body">
-
-               <div class="clearfix"></div>
-           </section>
-
-            <article id="central-button">
-                <button type="button">Show more</button>
-            </article>
-            <hr>
-            <article id="banners">
-                <figure class="left-item-banner on-details-page">
-                    <figcaption class="name">Adidas blue<span class="status">For men</span></figcaption>
-                    <img src="img/mobile/banners/7.png" alt="shoes">
-                </figure>
-                <figure class="right-item-banner on-details-page">
-                    <figcaption class="name">Repair Patches<span class="status">&pound;150.50</span></figcaption>
-                    <img src="img/mobile/banners/8.png">
-                </figure>
-                <figure class="hidden-desktop-banner on-details-page">
-                    <figcaption class="name">Sale<span class="status">-70&percnt;</span>
+           <div class="catalog-body">
+               <figure class="item-short-overview-block">
+                    <img src="img/arrivals/2.png" alt="item">
+                    <figcaption class="item-short-description">
+                        <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
+                            <p class="price">&pound;34.55</p>
                     </figcaption>
-                    <img src="img/mobile/banners/9.png">
                 </figure>
-                <div class="clearfix"></div>
-            </article>
-            <hr>
-        </section>
+
+                <figure class="item-short-overview-block">
+                    <img src="img/arrivals/2.png" alt="item">
+                    <figcaption class="item-short-description">
+                        <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
+                            <p class="price">&pound;34.55</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="item-short-overview-block">
+                    <img src="img/arrivals/2.png" alt="item">
+                    <figcaption class="item-short-description">
+                        <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
+                            <p class="price">&pound;34.55</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="item-short-overview-block">
+                    <img src="img/arrivals/2.png" alt="item">
+                    <figcaption class="item-short-description">
+                        <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
+                            <p class="price">&pound;34.55</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="item-short-overview-block">
+                    <img src="img/arrivals/2.png" alt="item">
+                    <figcaption class="item-short-description">
+                        <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
+                            <p class="price">&pound;34.55</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="item-short-overview-block">
+                    <img src="img/arrivals/2.png" alt="item">
+                    <figcaption class="item-short-description">
+                        <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
+                            <p class="price">&pound;34.55</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="item-short-overview-block">
+                    <img src="img/arrivals/2.png" alt="item">
+                    <figcaption class="item-short-description">
+                        <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
+                            <p class="price">&pound;34.55</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="item-short-overview-block">
+                    <img src="img/arrivals/2.png" alt="item">
+                    <figcaption class="item-short-description">
+                        <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
+                            <p class="price">&pound;34.55</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="item-short-overview-block">
+                    <img src="img/arrivals/2.png" alt="item">
+                    <figcaption class="item-short-description">
+                        <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
+                            <p class="price">&pound;34.55</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="item-short-overview-block">
+                    <img src="img/arrivals/2.png" alt="item">
+                    <figcaption class="item-short-description">
+                        <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
+                            <p class="price">&pound;34.55</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="item-short-overview-block">
+                    <img src="img/arrivals/2.png" alt="item">
+                    <figcaption class="item-short-description">
+                        <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
+                            <p class="price">&pound;34.55</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="item-short-overview-block">
+                    <img src="img/arrivals/2.png" alt="item">
+                    <figcaption class="item-short-description">
+                        <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
+                            <p class="price">&pound;34.55</p>
+                    </figcaption>
+                </figure>
+           </div>
+
+            <div class="main-button-container centered-buttons">
+                <button class="main-button" type="button">Show more</button>
+            </div>
+            <div class="banners">
+                <img class="first-banner-image" src="img/mobile/banners/adidas_blue.png" alt="adidas blue">
+                <img class="second-banner-image tablet-visible-banner" src="img/mobile/banners/repair_patches.png" alt="repair patches">
+                <img class="third-banner-image desktop-visible-banner" src="img/mobile/banners/sale.png" alt="sale">
+            </div>
+
+        </main>
      <footer>
             <div class="customer-navigation">
                 <h3>Quick Links</h3>
@@ -259,44 +331,8 @@
             </div>
 
         </footer>
-    </main>
+    </div>
 
-    <script id="item-tmpl" type="text/x-jquery-tmpl">
-        <figure class="item">
-            <figcaption class="image">
-                <img src="img/mobile/catalog/${source}"} />
-                <p class="details link-onhover"><a href="item_details.html?id=${id}">Quick view</a></p>
-                <p class="more link-onhover"><a href="item_details.html?id=${id}">More photos</a></p>
-                <div class="filter-for-item"></div>
-            </figcaption>
-            <figcaption class="title">
-                <h3>
-                    ${name}
-                </h3>
-                <p class="price">
-                    ${price}
-                    <span class="status">
-                        ${status}
-                    </span>
-                </p>
-             </figcaption>
-
-        </figure>
-
-        {{if this.index(this.data) == 1 || this.index(this.data) == 2 || this.index(this.data) == 3}}
-                 <div class='discount-offer extra-discount-offer-${$item.index($item.data)}'>
-                    <h3>Last weekend <strong>extra 50%</strong> off on all reduced boots and shoulder bags</h3>
-                    <p>This offer is valid in-store and online. Prices displayed reflect this additional discount. This offer ends at 11:59 GMT on March 1st 2015</p>
-                 </div>
-            {{/if}}
-    </script>
-
-    <script>
-        $('#item-tmpl').tmpl(shopItems, {
-            index: function(item) {
-                return $.inArray(item, shopItems);
-            }
-        }).insertBefore('#catalog-body .clearfix');
-    </script>
+    
 </body>
 </html>

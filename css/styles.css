@@ -146,19 +146,25 @@ figure img {
     display: none;
 }
 
-.new-arrivals {
-    clear: both;
+.new-arrivals, .catalog-body {
+    width: 90%;
+    margin: auto 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-
-.name {
+.name, .heading {
     text-align: center;
     font-size: 14px;
 }
 
 .item-short-overview-block {
-    width: 42.5%;
-    float: left;
+    width: 47.5%;
+}
+
+.tablet-visible-item-short-overview, .desktop-visible-item-short-overview {
+    display: none;
 }
 
 
@@ -199,172 +205,29 @@ p.link-onhover a {
 
 /* for start page */
 
-#filters {
-    position: relative;
-}
-
-#filters .filters-select {
+.selecting-filters-container {
     display: none;
 }
 
-#filters ul {
-    margin: 0;
+.selected-item-properties {
+    padding: 0;
     list-style-type: none;
-    position: relative;
-    padding: 0;
-    margin-left: 20px;
-    font-weight: bold;
-    font-family: 'Open Sans';
-}
-
-#filters .item-properties {
-    overflow: hidden;
     white-space: nowrap;
-}
-
-#filters li {
-    line-height: 50px;
-    height: 55px;
+    margin-left: 5%;
+    width: calc(95% - 60px);
     display: inline-block;
-    margin-right: 5px;
 }
 
-#filters .filter-btn {
-    outline: none;
+.selected-property {
+    display: inline-block;
+}
+
+.showing-filters-button {
     box-sizing: border-box;
-    background: linear-gradient(to right, transparent, white, white, white);
-    border: none;
-    width: 55px;
+    width: 56px;
     height: 55px;
-    border-radius: 0;
-    position: absolute;
-    right: 0;
-    padding: 0;
-}
-
-#filters .filter-btn:hover {
-    background: linear-gradient(to right, transparent, #e5e5e5, #e5e5e5, #e5e5e5);;
-}
-
-#filters a {
-    text-decoration: none;
-    color: black;
-    font-size: 12px;
-}
-
-#filters .not-selected-property {
-    color: black !important;
-}
-
-#filters .item-property {
-    font-size: 12px;
-    color: red;
-}
-
-
-
-#filters .dropdown-filters {
-    display: none;
-    margin: 0;
-    width: 100%;
-    position: absolute;
-    z-index: 150;
-    background-color: white;
-
-}
-
-#filters .dropdown-filters .swipe-line {
-    display: block;
-    white-space: nowrap;
-    width: 200%;
-    overflow: hidden;
-    font-size: 30px;
-    line-height: 0;
-    height: 50px;
-    margin: 0 0 30px 0;
-
-}
-
-#filters .dropdown-filters .heading{
-    font-size: 14px;
-    font-style: italic;
-    font-weight: normal;
-    font-family: 'Open Sans';
-    margin: 27px 0 53px 20px;
-
-}
-
-#filters .dropdown-filters h5 {
-    font-size: 12px;
-    margin: 20px 0 0 20px;
-}
-
-
-#filters .dropdown-filters p {
-    display: inline-block;
-    position: relative;
-    margin-right: 5px;
-    cursor: pointer;
-}
-
-#filters .selected-filter {
-    color: #f14a58;
-}
-
-#catalog-body {
-    width: 89.3%;
-    margin: 0 auto;
-    overflow: hidden;
-    margin-top: 20px;
-}
-
-#catalog-body figure.item:nth-of-type(2n) {
-    margin-left: 6%;
-}
-
-#catalog-body .item .title {
-    height: 118px;
-}
-
-#catalog-body .extra-discount-offer-2,
-#catalog-body .extra-discount-offer-3 {
-    display: none;
-}
-
-#catalog-body .extra-discount-offer-1 {
-    text-align: center;
-    clear: both;
-}
-
-#catalog-body .discount-offer {
-    width: 75%;
-    margin: 0 auto;
-}
-
-#catalog-body .discount-offer h3 {
-    margin: auto auto;
-    line-height: 30px;
-}
-
-#catalog-body .discount-offer p {
-    font-size: 12px;
-    line-height: 28px;
-    margin-top: 10px;
-    margin-bottom: 65px;
-    font-style: italic;
-    font-family: 'Open Sans';
-}
-
-#catalog-body .discount-offer strong {
-    color: #f14a58;
-
-}
-
-#catalog-body figure:nth-child(14),
-#catalog-body figure:nth-child(13),
-#catalog-body figure:nth-child(15),
-#catalog-body figure:nth-child(12) {
-    display: none;
+    border: none;
+    background: linear-gradient(to right, rgba(237,237,237,0) 0%, rgba(255,255,255,0) 0%, rgba(246,246,246,0.36) 16%, rgba(246,246,246,1) 45%);
 }
 
 /*for catalog */
@@ -465,7 +328,11 @@ p.link-onhover a {
     }
 
     .item-short-overview-block {
-        width: 26.66%;
+        width: 30%;
+    }
+
+    .tablet-visible-item-short-overview {
+        display: block;
     }
 
     .first-banner-image {
@@ -515,7 +382,11 @@ p.link-onhover a {
    }
     
     .item-short-overview-block {
-        width: 18.75%;
+        width: 21.25%;
+    }
+
+    .desktop-visible-item-short-overview {
+        display: block;
     }
 
     .tablet-visible-banner {
