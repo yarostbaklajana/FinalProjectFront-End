@@ -1,83 +1,79 @@
 'use strict';
-{
 
-    class Carousel {
-        constructor() {
-            this.currentPosition = 0;
-            this.step = 33.3;
-            this.previousChecked = 0;
-            this.slides = document.querySelectorAll('.slide');
-            this.carouselControlsContainer = document.getElementById('carousel-controls-container');
-            this.carouselControlsContainer.addEventListener('click', (e) => {
+
+    function Carousel() {
+            var currentPosition = 0;
+            var step = 33.3;
+            var previousChecked = 0;
+            var slides = document.querySelectorAll('.slide');
+            var carouselControlsContainer = document.getElementById('carousel-controls-container');
+            carouselControlsContainer.addEventListener('click', function(e) {
                 if(e.target.classList.contains('carousel-control')) {
-                    this.turnSlidesByClick(e.target.id);
+                    turnSlidesByClick(e.target.id);
                 }
             });
-        }
 
-        addCarouselButtons() {
+            addCarouselButtons();
+            launchCarousel();
+            
 
-            this.slides.forEach( (item, index) =>  {
-                let carouselButton = document.createElement('li');
+        function addCarouselButtons() {
+            slides.forEach(function(item, index) {
+                var carouselButton = document.createElement('li');
                 carouselButton.classList.add('carousel-control');
                 carouselButton.setAttribute('id', 'carousel-btn-' + index)
                 if (index === 0) {
                     carouselButton.classList.add('checked');
                 }
-                this.carouselControlsContainer.appendChild(carouselButton);
+                carouselControlsContainer.appendChild(carouselButton);
             });
-            
-            
         }
 
-        launchCarousel() {
-            setInterval(() => {
-                if (this.currentPosition > (-this.step * (this.slides.length - 1))) {
-                    this.currentPosition -= this.step;
-                    this.turnSlide(this.currentPosition);
-                    this.changeCheckedButton(this.previousChecked + 1);
+        function launchCarousel() {
+            var limitPosition = (step * (slides.length - 1)) * (-1);
+            setInterval(function() {
+                if (currentPosition > limitPosition) {
+                    currentPosition -= step;
+                    turnSlide(currentPosition);
+                    changeCheckedButton(previousChecked + 1);
                 } else {
-                    this.currentPosition = 0;
-                    this.turnSlide(this.currentPosition);
-                    this.changeCheckedButton(0);
+                    currentPosition = 0;
+                    turnSlide(currentPosition);
+                    changeCheckedButton(0);
                 }
 
             }, 10000);
         }
 
-        turnSlide(nextPosition) {
-            for (let i = 0; i < this.slides.length; i++) {
-                this.slides[i].style.left = nextPosition + "%";
+        function turnSlide(nextPosition) {
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.left = nextPosition + "%";
             }
         }
 
-        changeCheckedButton(id) {
-            const buttons = document.querySelectorAll('.carousel-control');
+        function changeCheckedButton(id) {
+            var buttons = document.querySelectorAll('.carousel-control');
 
-            for (let i = 0; i < buttons.length; i++) {
+            for (var i = 0; i < buttons.length; i++) {
                 if (buttons[i].classList.contains('checked')) {
                     buttons[i].classList.remove('checked');
                 }
             }
-            let currentChecked = document.querySelector('#carousel-btn-' + id);
+            var currentChecked = document.querySelector('#carousel-btn-' + id);
             currentChecked.classList.add('checked');
-            this.previousChecked = id;
+            previousChecked = id;
         }
 
-        turnSlidesByClick(id) {
+        function turnSlidesByClick(id) {
             var numberPattern = /\d+/g;
             var currentButtonNumber = parseInt(id.match(numberPattern));
-            var nextPosition = this.currentPosition - this.step * (currentButtonNumber - this.previousChecked);
-            this.turnSlide(nextPosition);
-            this.changeCheckedButton(currentButtonNumber);
-            this.currentPosition = nextPosition;
+            var nextPosition = currentPosition - step * (currentButtonNumber - previousChecked);
+            turnSlide(nextPosition);
+            changeCheckedButton(currentButtonNumber);
+            currentPosition = nextPosition;
         }
 
 
     }
 
-    const carousel = new Carousel();
-    carousel.addCarouselButtons();
-    carousel.launchCarousel();
-
-}
+    var carousel = new Carousel();

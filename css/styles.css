@@ -227,8 +227,49 @@ p.link-onhover a {
     width: 56px;
     height: 55px;
     border: none;
-    background: linear-gradient(to right, rgba(237,237,237,0) 0%, rgba(255,255,255,0) 0%, rgba(246,246,246,0.36) 16%, rgba(246,246,246,1) 45%);
+    background: linear-gradient(to right, rgba(237,237,237,0) 0%, rgba(255,255,255,0) 0%, rgba(246,246,246,0.36) 5%, rgba(255,255,255,1) 15%);
+    outline: none;
 }
+
+.dropdown-filters {
+    font-family: "Open Sans";
+}
+
+.filters-hint {
+    font-size: 14px;
+    font-weight: normal;
+    font-style: italic;
+    margin: 35px 5% 55px 5%;
+}
+
+
+.filters-section-heading {
+    margin-left: 5%;
+    font-family: "Roboto";
+    margin-bottom: 0;
+}
+
+.list-of-filters {
+    padding: 0;
+    margin: auto 30px 35px 5%;
+    list-style-type: none;
+    white-space: nowrap;
+}
+
+.filter-value {
+    display: inline-block;
+    font-size: 28px;
+    margin-right: 20px;
+    font-family: "Open Sans";
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.selected-filter-value {
+    color: #f14a58;
+}
+
+
 
 /*for catalog */
 
