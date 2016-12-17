@@ -7,6 +7,7 @@
     <script type="text/javascript" src="js/shopItems.js"></script>
     <script type="text/javascript" src="js/common/jquery.tmpl.min.js"></script>
     <script type="text/javascript" src="js/dropdown_menu.js"></script>
+    <script src="js/filtersOpener.js" defer></script>
     <script src="js/filters_slider.js" defer></script>
     <script  src="js/storage.js"></script>
 
@@ -104,7 +105,7 @@
                 </ul>
                 <button class="showing-filters-button" type="button"><img src="img/mobile/icons/filter.png"></button>
 
-                <div class="dropdown-filters">
+                <div class="dropdown-filters hidden-filters">
                     <h2 class="filters-hint">Drag and select</h2>
                     <h5 class="filters-section-heading">Fashion</h5>
                     <ul class="list-of-filters">
@@ -158,7 +159,7 @@
 
            <div class="catalog-body">
                <figure class="item-short-overview-block">
-                    <img src="img/arrivals/2.png" alt="item">
+                    <img src="img/mobile/catalog/1.jpg" alt="item">
                     <figcaption class="item-short-description">
                         <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
                             <p class="price">&pound;34.55</p>
@@ -166,7 +167,7 @@
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/arrivals/2.png" alt="item">
+                    <img src="img/mobile/catalog/2.jpeg" alt="item">
                     <figcaption class="item-short-description">
                         <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
                             <p class="price">&pound;34.55</p>
@@ -174,7 +175,7 @@
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/arrivals/2.png" alt="item">
+                    <img src="img/mobile/catalog/3.jpg" alt="item">
                     <figcaption class="item-short-description">
                         <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
                             <p class="price">&pound;34.55</p>
@@ -182,7 +183,20 @@
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/arrivals/2.png" alt="item">
+                    <img src="img/mobile/catalog/4.jpg" alt="item">
+                    <figcaption class="item-short-description">
+                        <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
+                            <p class="price">&pound;34.55</p>
+                    </figcaption>
+                </figure>
+
+                <section class="extra-offer-container">
+                    <p class="offer">Last weekend extra <strong class="discount">50&#37;</strong> off on all redused boots and shoulder bags</p>
+                    <p class="offer-notice">This offer is valid in store and online. Prices displayed reflect this additional discounts. This offer ends at 11:59 GMT on March 1st 2015</p>
+                </section>
+
+                <figure class="item-short-overview-block">
+                    <img src="img/mobile/catalog/5.jpg" alt="item">
                     <figcaption class="item-short-description">
                         <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
                             <p class="price">&pound;34.55</p>
@@ -190,7 +204,7 @@
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/arrivals/2.png" alt="item">
+                    <img src="img/mobile/catalog/6.jpg" alt="item">
                     <figcaption class="item-short-description">
                         <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
                             <p class="price">&pound;34.55</p>
@@ -198,7 +212,7 @@
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/arrivals/2.png" alt="item">
+                    <img src="img/mobile/catalog/7.jpg" alt="item">
                     <figcaption class="item-short-description">
                         <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
                             <p class="price">&pound;34.55</p>
@@ -206,7 +220,7 @@
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/arrivals/2.png" alt="item">
+                    <img src="img/mobile/catalog/8.jpg" alt="item">
                     <figcaption class="item-short-description">
                         <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
                             <p class="price">&pound;34.55</p>
@@ -214,7 +228,7 @@
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/arrivals/2.png" alt="item">
+                    <img src="img/mobile/catalog/9.jpg" alt="item">
                     <figcaption class="item-short-description">
                         <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
                             <p class="price">&pound;34.55</p>
@@ -222,7 +236,7 @@
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/arrivals/2.png" alt="item">
+                    <img src="img/mobile/catalog/10.jpg" alt="item">
                     <figcaption class="item-short-description">
                         <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
                             <p class="price">&pound;34.55</p>
@@ -230,7 +244,7 @@
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/arrivals/2.png" alt="item">
+                    <img src="img/mobile/catalog/11.jpg" alt="item">
                     <figcaption class="item-short-description">
                         <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
                             <p class="price">&pound;34.55</p>
@@ -238,15 +252,7 @@
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/arrivals/2.png" alt="item">
-                    <figcaption class="item-short-description">
-                        <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
-                            <p class="price">&pound;34.55</p>
-                    </figcaption>
-                </figure>
-
-                <figure class="item-short-overview-block">
-                    <img src="img/arrivals/2.png" alt="item">
+                    <img src="img/mobile/catalog/12.jpg" alt="item">
                     <figcaption class="item-short-description">
                         <h5 class="heading">Boyfriend T-Shirt with Bohemian Print</h5>
                             <p class="price">&pound;34.55</p>

@@ -103,23 +103,24 @@ figure img {
     clear: both;
     display: flex;
     align-items: center;
+        margin-top: 55px;
+    margin-bottom: 110px;
 }
 
 .centered-buttons {
     justify-content: center;
 }
 
-
-
 .main-button {
     background: transparent;
     outline: none;
-    height: 60px;
-    width: 215px;
+    height: 62px;
+    width: 220px;
     font-size: 14px;
     font-weight: bold;
     border: 1px solid #a5a5a5;
     cursor: pointer;
+
 }
 
 .banners {
@@ -134,7 +135,7 @@ figure img {
 
 
 .first-banner-image {
-    width: 100%;
+    width: 108%;
 }
 
 .tablet-visible-banner, .desktop-visible-banner {
@@ -154,8 +155,18 @@ figure img {
     justify-content: space-between;
 }
 
+.heading {
+    font-family: "Open Sans";
+    font-size: 28px;
+    margin: 50px auto 42px;
+}
+
 .name, .heading {
     text-align: center;
+}
+
+.name {
+    margin-bottom: 10px;
     font-size: 14px;
 }
 
@@ -175,6 +186,9 @@ figure img {
 .price {
    font-size: 10px;
    text-align: center; 
+       font-size: 12px;
+    text-align: center;
+    margin-top: 0px;
 }
 
 p.link-onhover {
@@ -216,6 +230,9 @@ p.link-onhover a {
     margin-left: 5%;
     width: calc(95% - 60px);
     display: inline-block;
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .selected-property {
@@ -232,7 +249,15 @@ p.link-onhover a {
 }
 
 .dropdown-filters {
+    width: 100%;
+    display: block;
     font-family: "Open Sans";
+    position: absolute;
+    background: white;
+}
+
+.hidden-filters {
+    display: none;
 }
 
 .filters-hint {
@@ -251,9 +276,13 @@ p.link-onhover a {
 
 .list-of-filters {
     padding: 0;
+    font-size: 0;
     margin: auto 30px 35px 5%;
     list-style-type: none;
     white-space: nowrap;
+    position: relative;
+    left: 0;
+    transition: left 1s ease-in-out;
 }
 
 .filter-value {
@@ -269,7 +298,27 @@ p.link-onhover a {
     color: #f14a58;
 }
 
+.extra-offer-container {
+    font-family: "Open Sans";
+     width: 80%;
+     text-align: center;
+     line-height: 30px;
+     margin: auto auto;
+}
 
+.offer {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.offer-notice {
+    font-style: italic;
+    font-size: 12px;
+}
+
+.discount {
+    color: #f14a58;
+}
 
 /*for catalog */
 
@@ -477,149 +526,8 @@ p.link-onhover a {
    }
 
     /*catalog desktop */
-    #catalog-body {
-        margin-top: 60px;
-    }
-
-    #catalog-body .extra-discount-offer-2 {
+    
+    .dropdown-filters, .showing-filters-button, .selected-item-properties {
         display: none;
     }
-
-    #catalog-body .extra-discount-offer-3 {
-        display: block;
-        clear: both;
-        width: 100%;
-        font-family: 'Open Sans';
-    }
-
-    #catalog-body .discount-offer p{
-        font-size: 14px;
-        margin-top: 15px;
-    }
-
-    #catalog-body figure.item {
-        margin: 0 !important;
-    }
-
-    #catalog-body figure.item .title {
-        height: 160px !important;
-    }
-
-    #catalog-body figure.item:nth-of-type(4n+2) {
-        margin: 0 5% !important;
-    }
-
-    #catalog-body figure.item:nth-of-type(4n+3) {
-        margin-right: 5% !important;
-    }
-
-    #filters .dropdown-filters {
-        display: none !important;
-    }
-
-
-    #filters ul {
-        display: none;
-    }
-
-    #filters {
-        margin: 0 auto;
-    }
-
-    #filters .filters-select {
-        display: block;
-
-    }
-
-    #filters select {
-        display: block;
-        float: left;
-        height: 65px;
-        width: 14.71%;
-        box-sizing: border-box;
-        padding-left: 20px;
-        font-size: 16px;
-        font-weight: bold;
-        outline: none;
-        background: url("../img/mobile/icons/filter.png") no-repeat 90% 50%;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border: none;
-    }
-
-    #filters select:focus{
-        background-color: #e5e5e5;
-        color: #f14a58;
-    }
-
-    #filters  select::-ms-expand {
-        display: none;
-    }
-
-    #filters .filters-select option {
-        font-size: 20px;
-    }
-
-    #fashion-select, #brand-select, #size-select {
-        position: relative;
-        padding-top: 18px;
-
-    }
-
-    #filters .filters-select select.first,
-    #filters .filters-select select.last {
-        width: 20.58%;
-    }
-
-    #filters .filters-select select.first {
-        padding-left: 60px;
-    }
-
-    #filters .filters-select select.last {
-        padding-right: 60px;
-        background: url("../img/mobile/icons/filter.png") no-repeat 70% 50%;
-    }
-
-    #filters label[for="fashion-select"],
-    #filters label[for="brand-select"],
-    #filters label[for="size-select"] {
-        position: absolute;
-        z-index: 2;
-        padding-top: 12px;
-        padding-left: 20px;
-        font-size: 10px;
-    }
-
-    #filters label[for="fashion-select"] {
-        padding-left: 60px;
-    }
-
-
-
-
-    /*start page desktop */
-    
-
-    
-
-    
-
-    #shopping-bag-buttons-container .buy-items-btn-container button{
-        width: 340px !important;
-        height: 75px !important;
-    }
-
-    #shopping-bag-buttons-container .clear-bag-btn-container .empty-bag {
-        margin-left: 90px;
-    }
-
-    #shopping-bag-buttons-container .total-cost-container p{
-        margin-right: 90px;
-    }
-
-
 }
-
-
-
