@@ -76,29 +76,60 @@ footer {
     margin: 0 auto;
 }
 
+
+
+.customer-navigation::before, .contact-info::before, .customer-navigation::after, .contact-info::after, .about-site-info::before, .about-site-info::after {
+    display: table;
+    content: "";
+}
+
+.customer-navigation::after, .contact-info::after, .about-site-info::after {
+    clear: both;
+}
+
+.customer-navigation {
+    padding-bottom: 40px;
+}
+
 .customer-navigation a {
-    line-height: 34px;
     text-decoration: none;
     color: black;
+    line-height: 37px;
 }
+
 
 .customer-navigation, .contact-info {
     width: 45%;
     float: left;
-    margin-left: 5%;
+    padding-left: 5%;
+    padding-top: 15px;
 }
 
 .contact-info{
     height: 109px;
+    border-top: 1px solid #c5c5c5;
+    border-bottom: 1px solid #c5c5c5;
 }
+
+.bordered-left-contact-info {
+    padding-left: calc(5% - 1px);
+    border-left: 1px solid #c5c5c5;
+}
+
 
 .delivery-service-advertisement {
     display: none;
 }
 
 .footer-navigation, .follow-buttons-container {
-    line-height: 64px;
-    height: 64px;
+    line-height: 60px;
+    height: 60px;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.heading-of-footer-sections{
+    font-family: "Open Sans";
+    margin-bottom: 20px;
 }
 
 .footer-navigation {
@@ -110,19 +141,19 @@ footer {
 .footer-navigation, .trademark {
     float: left;
     width: 65%;
-    margin-left: 5%;
+    padding-left: 5%;
 }
 
 .footer-navigation li {
     display: inline;
     margin-right: 10px;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .follow-buttons-container, .share {
     width: 25%;
     float: right;
-    margin-left: 5%;
+    padding-left: 5%;
 }
 
 .follow-button-facebook, .follow-button-twitter, .share-button {
@@ -162,7 +193,7 @@ footer {
     display: none;
     z-index: 3;
     position: absolute;
-    top: 70px;
+    top: 60px;
     background-color: white;
     width: 100%;
     box-shadow: 1px 150px 36px 33px rgba(0,0,0,0.75);
@@ -215,7 +246,6 @@ footer {
 
 
     #dropdown-menu {
-        position: static;
         font-size: 12px;
         font-weight: bold;
         box-shadow: none;
@@ -229,7 +259,7 @@ footer {
 
     .navigation-links-container li {
         display: inline;
-        margin-right: 16px;
+        margin-right: 23Fpx;
     }
 
     .search-input {
@@ -245,10 +275,12 @@ footer {
 
     .customer-navigation, .contact-info {
         width: 28%;
+        border: none;
     }
 
     .follow-buttons-container {
         float: left;
+        border: none;
     }
 
     .footer-navigation {
@@ -295,6 +327,7 @@ footer {
 
     .customer-navigation, .contact-info {
         width: 20%;
+        
     }
 
     .delivery-service-advertisement {
