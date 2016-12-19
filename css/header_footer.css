@@ -264,7 +264,7 @@ footer {
 
 
     #dropdown-menu {
-        position: initial;
+        position: static;
         font-size: 12px;
         font-weight: bold;
         box-shadow: none;
