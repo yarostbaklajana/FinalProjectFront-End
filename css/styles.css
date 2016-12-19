@@ -1,11 +1,4 @@
-html,
-body {
-    overflow-x: hidden;
-    margin: 0;
-    margin: 0 auto;
-    max-width: 1180px;
-    min-width: 375px;
-}
+
 
 button:hover {
     color: #f14a58;
@@ -24,6 +17,7 @@ a img {
     flex-direction: column;
     min-height: 100vh;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .fixed-container {
@@ -36,7 +30,8 @@ a img {
 
 .main-page-content {
     font-size: 10px;
-    flex: 2;
+    -webkit-flex: 2;
+    -moz-flex: 2;
 }
 
 figure {
