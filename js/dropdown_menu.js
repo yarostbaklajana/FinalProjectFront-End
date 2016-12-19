@@ -1,17 +1,14 @@
 'use strict';
 
-$(document).ready(function() {
+var dropdownMenuButton = document.querySelector('#dropdown-button');
+var container = document.querySelector('.container');
 
-    $('#dropdown-button').click(function() {
-        $(this).hide();
-        $('#dropdown-menu').show();
-        $('#close-dropdown').show();
-    });
-
-    $('#close-dropdown').click(function() {
-        $(this).hide();
-        $('#dropdown-menu').hide();
-        $('#dropdown-button').show();
-    });
-
+dropdownMenuButton.addEventListener('click', function() {
+    toggleDropdownMenu();
 });
+
+function toggleDropdownMenu() {
+    var dropdownMenu = document.querySelector('#dropdown-menu');
+        dropdownMenu.classList.toggle('hidden-menu');
+        container.classList.toggle('fixed-container');
+}

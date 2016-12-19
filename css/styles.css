@@ -7,6 +7,15 @@ body {
     min-width: 375px;
 }
 
+button:hover {
+    color: #f14a58;
+    cursor: pointer;
+}
+
+a img {
+    width: 100%;
+}
+
 .container {
     min-width: 375px;
     max-width: 1180px;
@@ -15,6 +24,14 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: space-between;
+}
+
+.fixed-container {
+    position: fixed;
+}
+
+.hidden-menu {
+    display: none;
 }
 
 .main-page-content {
@@ -132,7 +149,17 @@ figure img {
     
 }
 
+.detailed-name {
+    text-align: center;
+        font-size: 22px;
+    margin-top: 40px;
+}
 
+.detailed-price {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 0px;
+}
 
 .first-banner-image {
     width: 108%;
@@ -191,31 +218,7 @@ figure img {
     margin-top: 0px;
 }
 
-p.link-onhover {
-    z-index: 20;
-    display: none;
-    position: absolute;
-    text-align: center;
-    font-weight: bold;
-    font-size: 24px;
-    width: 100%;
-    height: 30px;
-    line-height: 30px;
-    margin: 0;
-}
 
-p.details {
-    bottom: 55%;
-}
-
-p.more {
-    bottom: 35%;
-}
-
-p.link-onhover a {
-    color: white;
-    text-decoration: none;
-}
 
 /* for start page */
 
@@ -248,8 +251,8 @@ p.link-onhover a {
     overflow: hidden;
     white-space: nowrap;
     float: left;
-    height: 50px;
-    line-height: 50px;
+    height: 65px;
+    line-height: 60px;
 }
 
 
@@ -260,7 +263,8 @@ p.link-onhover a {
 }
 
 .showing-filters-button {
-    height: 50px;
+    outline: none;
+    height: 60px;
     padding: 0;
     width: 58px;
     border: none;
@@ -346,8 +350,12 @@ p.link-onhover a {
 
 .page-heading {
     font-family: "Open Sans";
-    font-size: 14px;
-    margin-left: 5%;
+    font-size: 12px;
+    margin: 0;
+    padding-left: 5%;
+    line-height: 50px;
+    height: 55px;
+    border-bottom: 1px solid #a5a5a5;
 }
 
 .notice {
@@ -382,11 +390,12 @@ p.link-onhover a {
     font-style: italic;
     line-height: 30px;
     text-align: center;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .item-property-buttons-container {
     display: flex;
+    margin-top: 25px;
 }
 
 .prop-heading {
@@ -397,6 +406,7 @@ p.link-onhover a {
 }
 
 .property-button {
+    outline: none;
     font-size: 12px;
     font-weight: bold;
     box-sizing: border-box;
@@ -404,7 +414,7 @@ p.link-onhover a {
     height: 40px;
     margin: auto calc((100% - 80px * 3 - 40px)/6);
     background: transparent;
-    border: 1px solid #a5a5a5;
+    border: none;
 }
 
 .item-images-bar, .item-detailed-description-container{
@@ -413,8 +423,9 @@ p.link-onhover a {
     
 }
 
-.item-images-bar {
+.item-images-bar, .catalog-body {
     font-size: 0;
+    margin-top: 20px;
 }
 
 .front-item-picture {
@@ -425,8 +436,51 @@ p.link-onhover a {
     width: 33.33%;
 }
 
+.shopping-bag-heading {
+    font-size: 20px;
+}
 
+.items-in-bag {
+    display: flex;
+    width: 90%;
+    margin: auto 5%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
+.item-added-to-bag {
+    width: 100%;
+    margin: 20px auto;
+}
+
+.item-added-to-bag img {
+    width: 50%;
+    float: left;
+}
+
+.item-properties-description {
+    float: right;
+    width: 45%;
+    padding-left: 5%;
+}
+
+.item-properties-description .name {
+    text-align: left;
+}
+
+.removing-item-button {
+    color: #f14a58;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 10px auto;
+    background: transparent;
+}
+
+.highligted-property-button{
+    border: 1px solid #a5a5a5;
+}
 
 
 /*for item-details */
@@ -444,6 +498,12 @@ p.link-onhover a {
         margin-bottom: 15px;
     font-size: 16px;
     margin-top: 35px;
+}
+
+.page-heading {
+    font-size: 16px;
+    line-height: 60px;
+    height: 60px;
 }
 
 .price {
@@ -491,14 +551,29 @@ p.link-onhover a {
         margin: 0;
     }
 
+    .item-images-bar, .catalog-body {
+        margin-top: 40px;
+    }
+
     .item-description {
         width: 60%;
         margin: auto auto;
+    }
+    .detailed-name {
+        font-size: 22px;
+    }
+
+    .detailed-price {
+        font-size: 18px;
+    }
+    .detailed-name, .detailed-price {
+        margin: 18px auto;
     }
     
     .item-property-buttons-container {
         justify-content: center;
         align-items: center;
+        margin-top: 10px;
     }
 
     .property-button {
@@ -514,6 +589,23 @@ p.link-onhover a {
        width: 25%;
    }
 
+   .item-added-to-bag {
+       width: 50%;
+   }
+
+   .item-properties-description .name {
+       margin-top: 0;
+   }
+
+   .item-properties-description p {
+       font-size: 12px;
+   }
+
+   .removing-item-button {
+       font-size: 14px;
+   }
+
+   
    
 }
 
@@ -620,6 +712,16 @@ p.link-onhover a {
         -moz-appearance: none;
         padding-left: 1%;
         outline: none;
+        position: relative;
+    }
+
+    .filter-selection-label {
+        position: absolute;
+        display: none;
+    }
+
+    .filter-selection option::checked{
+        background-color: #a5a5a5;
     }
 
     .filter-selection::-webkit-selection {
@@ -639,5 +741,9 @@ p.link-onhover a {
     .last-filter-selection {
         padding-right: 5%;
         width: 20%;
+    }
+
+    .shopping-bag-heading {
+        font-size: 24px;
     }
 }

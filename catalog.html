@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Catalog</title>
-    <script type="text/javascript" src="js/dropdown_menu.js"></script>
+    <script  src="js/dropdown_menu.js" defer></script>
     <script src="js/filtersOpener.js" defer></script>
     <script src="js/filters_slider.js" defer></script>
     <script  src="js/storage.js"></script>
@@ -14,22 +14,22 @@
 </head>
 <body>
     <div class="container">
-    <header>
+     <header>
             <picture class="logo">
                 <source srcset="img/icons/logo.png" media="(max-width: 767px)">
                 <img alt="logo" src="img/icons/logo_full.png">
             </picture>
-            <div id="header-links-container">
+            <div class="header-links-container">
                 <a href="#" class="sign-up-link">E-mail sign up</a>
-                <a href="shopping_bag.html">Bag</a>
-                <span class="total-price"></span>
-                <span id="total-count"></span>
+                <a href="shopping_bag.html" class="shopping-bag-link">Bag</a>
+                <span class="total-price">&pound;1640.50</span>
+                <span class="items-counter">(4)</span>
             </div>
             <button type="button" id="dropdown-button" class="dropdown-menu-button"><img src="img/icons/nav_open.png"
                                                                                  alt="menu"></button>
             <button type="button" id="close-dropdown" class="dropdown-menu-button"><img
             src="img/icons/menu_close.png"></button>
-            <nav id="dropdown-menu">
+            <nav id="dropdown-menu" class="hidden-menu">
                 <ul class="navigation-links-container">
                     <li><a href="#">Women</a></li>
                     <li><a href="#">Men</a></li>
@@ -49,21 +49,25 @@
 
                 <div class="selecting-filters-container">
 
-                    <select class="filter-selection first-filter-selection">
-                        <option disabled="disabled" value="filter">Casual style</option>
+                    <label for"fashion-select" class="filter-selection-label">Fashion</label>
+                    <select id="fashion-select" class="filter-selection first-filter-selection">
+                        <option selected="selected" disabled="disabled" value="filter">Fashion</option>
                         <option value="filter">New look</option>
                         <option value="filter">Sport</option>
                         <option value="filter">Vintage</option>
                         <option value="filter">Class</option>
                     </select>
-
-                    <select class="filter-selection"> 
+                    
+                    <label for"product-type-select" class="filter-selection-label">Product type</label>
+                    <select id="product-type-select" class="filter-selection"> 
                         <option disabled="disabled" selected="selected">Product type</option>
                         <option value="filter">Coats</option>
                         <option value="filter">Dresses</option>
                         <option value="filter">Jersee</option>
                     </select>
-                    <select class="filter-selection">
+                    
+                    <label for="color-select" class="filter-selection-label">Color</label>
+                    <select id="color-select" class="filter-selection">
                         <option disabled="disabled" selected="selected">Color</option>
                         <option value="filter">Black</option>
                         <option value="filter">Blue</option>
@@ -71,14 +75,19 @@
                         <option value="filter">Green</option>
                         <option value="filter">Goldeb</option>
                     </select>
-                    <select class="filter-selection">
+                    
+                    <label for="brand-select" class="filter-selection-label">Brand</label>
+                    <select id="brand-select" class="filter-selection">
+                        <option disabled="disabled" selected="selected">Brand</option>
                         <option value="filter">Antipodium</option>
                         <option value="filter">Adidas</option>
                         <option value="filter">New Balance</option>
                         <option value="filter">River Island</option>
                     </select>
-
-                    <select class="filter-selection">
+                    
+                    <label for="size-select" class="filter-selection-label">Size</label>
+                    <select id="size-select" class="filter-selection">
+                        <option disabled="disabled" selected="selected">Size</option>
                         <option value="filter">UK 18</option>
                         <option value="filter">UK 18L</option>
                         <option value="filter">UK 20</option>
@@ -86,13 +95,15 @@
                         <option value="filter">UK 20S</option>
                         <option value="filter">UK 22</option>
                     </select>
-
-                    <select class="filter-selection last-filter-selection">
+                    
+                    <label for="price-range-select" class="filter-selection-label">Price range</label>
+                    <select id="price-range-select" class="filter-selection last-filter-selection">
                         <option disabled="disabled" selected="selected">Price range</option>
-                        <option value="filter">UK 18</option>
-                        <option value="filter">UK 18L</option>
-                        <option value="filter">UK 20</option>
+                        <option value="filter">To &pound;99</option>
+                        <option value="filter">&pound;100 - &pound;299</option>
+                        <option value="filter">From &pound;300</option>
                     </select>
+                    
                 </div>
                 
                 <div class="filters-bar">
@@ -160,34 +171,34 @@
 
            <div class="catalog-body">
                <figure class="item-short-overview-block">
-                    <img src="img/catalog/1.jpg" alt="item">
+                    <img src="img/catalog/1.png" alt="item">
                     <figcaption class="item-short-description">
-                        <h5 class="name">Boyfriend T-Shirt with Bohemian Print</h5>
-                            <p class="price">&pound;34.55</p>
+                        <h5 class="name">Only Skinny Jeans</h5>
+                            <p class="price">&pound;65.50</p>
                     </figcaption>
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/catalog/2.jpeg" alt="item">
+                    <img src="img/catalog/2.png" alt="item">
                     <figcaption class="item-short-description">
-                        <h5 class="name">Boyfriend T-Shirt with Bohemian Print</h5>
-                            <p class="price">&pound;34.55</p>
+                        <h5 class="name">Neck Knittet Jumper</h5>
+                            <p class="price">&pound;76.25</p>
                     </figcaption>
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/catalog/3.jpg" alt="item">
+                    <img src="img/catalog/3.png" alt="item">
                     <figcaption class="item-short-description">
-                        <h5 class="name">Boyfriend T-Shirt with Bohemian Print</h5>
-                            <p class="price">&pound;34.55</p>
+                        <h5 class="name">Tirtle Neck jumper in Rib</h5>
+                            <p class="price">&pound;130.25</p>
                     </figcaption>
                 </figure>
 
                 <figure class="item-short-overview-block changing-order-item-overview">
-                    <img src="img/catalog/4.jpg" alt="item">
+                    <img src="img/catalog/4.png" alt="item">
                     <figcaption class="item-short-description">
-                        <h5 class="name">Boyfriend T-Shirt with Bohemian Print</h5>
-                            <p class="price">&pound;34.55</p>
+                        <h5 class="name">With Patchwork Crochet</h5>
+                            <p class="price">&pound;80.60</p>
                     </figcaption>
                 </figure>
 
@@ -197,66 +208,66 @@
                 </section>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/catalog/5.jpg" alt="item">
+                    <img src="img/catalog/5.png" alt="item">
                     <figcaption class="item-short-description">
-                        <h5 class="name">Boyfriend T-Shirt with Bohemian Print</h5>
+                        <h5 class="name">Levi's Jeans for Women</h5>
                             <p class="price">&pound;34.55</p>
                     </figcaption>
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/catalog/6.jpg" alt="item">
+                    <img src="img/catalog/6.png" alt="item">
                     <figcaption class="item-short-description">
                         <h5 class="name">Boyfriend T-Shirt with Bohemian Print</h5>
-                            <p class="price">&pound;34.55</p>
+                            <p class="price">&pound;90.00</p>
                     </figcaption>
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/catalog/7.jpg" alt="item">
+                    <img src="img/catalog/7.png" alt="item">
                     <figcaption class="item-short-description">
-                        <h5 class="name">Boyfriend T-Shirt with Bohemian Print</h5>
-                            <p class="price">&pound;34.55</p>
+                        <h5 class="name">Colour Block</h5>
+                            <p class="price">&pound;550.60</p>
                     </figcaption>
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/catalog/8.jpg" alt="item">
+                    <img src="img/catalog/8.png" alt="item">
                     <figcaption class="item-short-description">
-                        <h5 class="name">Boyfriend T-Shirt with Bohemian Print</h5>
-                            <p class="price">&pound;34.55</p>
+                        <h5 class="name">Monki Festval Knitted</h5>
+                            <p class="price">&pound;24.75</p>
                     </figcaption>
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/catalog/9.jpg" alt="item">
+                    <img src="img/catalog/9.png" alt="item">
                     <figcaption class="item-short-description">
-                        <h5 class="name">Boyfriend T-Shirt with Bohemian Print</h5>
-                            <p class="price">&pound;34.55</p>
+                        <h5 class="name">Oversized Cardigan</h5>
+                            <p class="price">&pound;90.00</p>
                     </figcaption>
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/catalog/10.jpg" alt="item">
+                    <img src="img/catalog/10.png" alt="item">
                     <figcaption class="item-short-description">
-                        <h5 class="name">Boyfriend T-Shirt with Bohemian Print</h5>
-                            <p class="price">&pound;34.55</p>
+                        <h5 class="name">Paul &#37; Joe Sister Jumper with Neon Trims</h5>
+                            <p class="price">&pound;19.75</p>
                     </figcaption>
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/catalog/11.jpg" alt="item">
+                    <img src="img/catalog/11.png" alt="item">
                     <figcaption class="item-short-description">
-                        <h5 class="name">Boyfriend T-Shirt with Bohemian Print</h5>
-                            <p class="price">&pound;34.55</p>
+                        <h5 class="name">Only Busted Knee Jean</h5>
+                            <p class="price">&pound;140.50</p>
                     </figcaption>
                 </figure>
 
                 <figure class="item-short-overview-block">
-                    <img src="img/catalog/12.jpg" alt="item">
+                    <img src="img/catalog/12.png" alt="item">
                     <figcaption class="item-short-description">
                         <h5 class="name">Boyfriend T-Shirt with Bohemian Print</h5>
-                            <p class="price">&pound;34.55</p>
+                            <p class="price">&pound;85.75</p>
                     </figcaption>
                 </figure>
            </div>
@@ -273,7 +284,7 @@
         </main>
      <footer>
             <div class="customer-navigation">
-                <h3>Quick Links</h3>
+                <h3 class="heading-of-footer-sections">Quick Links</h3>
                 <ul class="links-list">
                     <li><a href="#">Store locator</a></li>
                     <li><a href="#">Gift cards</a></li>
@@ -282,24 +293,24 @@
                     <li><a href="#">Support</a></li>
                 </ul>
             </div>
-            <div class="customer-navigation">
-                <h3>Customer Care</h3>
+            <div class="customer-navigation customer-care">
+                <h3 class="heading-of-footer-sections">Customer Care</h3>
                 <ul class="links-list">
                     <li><a href="#">Customer service</a></li>
                     <li><a href="#">Track my order</a></li>
                     <li><a href="#">Return policy</a></li>
-                    <li><a href="#">Shipping & delivery</a></li>
+                    <li><a href="#">Shipping &#37; delivery</a></li>
                     <li><a href="#">Contact us</a></li>
                     <li><a href="#">Careers</a></li>
                 </ul>
             </div>
 
             <section class="contact-info">
-                <h3>Questions</h3>
+                <h3 class="heading-of-footer-sections">Questions</h3>
                 <p><img src="img/icons/ico_tw.png" alt="icon"> Tweet us <span class="temp">@template</span></p>
             </section>
-            <section class="contact-info">
-                <h3>Order by phone</h3>
+            <section class="contact-info bordered-left-contact-info">
+                <h3 class="heading-of-footer-sections">Order by phone</h3>
                 <p>8-800-409-47-12</p>
             </section>
 
@@ -331,9 +342,9 @@
 
 
                 <ul class="footer-navigation">
-                    <li><a>Legal notice</a></li>
-                    <li><a>Privacy policy</a></li>
-                    <li><a>Site map</a></li>
+                    <li><a href="#">Legal notice</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Site map</a></li>
                 </ul>
             </div>
 

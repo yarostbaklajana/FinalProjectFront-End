@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>Homepage</title>
-    <script type="text/javascript" src="js/dropdown_menu.js"></script>
+    <script type="text/javascript" src="js/dropdown_menu.js" defer></script>
     <script type="text/javascript" src="js/carousel.js" defer></script>
     <script type="text/javascript" src="js/picturefill.js" defer></script>
     <script src="js/storage.js"></script>
@@ -20,18 +20,22 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo"></div>
-            <div id="header-links-container">
+            <picture class="logo">
+                <source srcset="img/icons/logo.png" media="(max-width: 767px)">
+                <img alt="logo" src="img/icons/logo_full.png">
+            </picture>
+            <div class="header-links-container">
                 <a href="#" class="sign-up-link">E-mail sign up</a>
-                <a href="shopping_bag.html">Bag</a>
-                <span class="total-price"></span>
-                <span id="total-count"></span>
+                <a href="shopping_bag.html" class="shopping-bag-link">Bag</a>
+                
+                <span class="total-price">&pound;1640.50</span>
+                <span class="items-counter">(4)</span>
             </div>
             <button type="button" id="dropdown-button" class="dropdown-menu-button"><img src="img/icons/nav_open.png"
                                                                                  alt="menu"></button>
             <button type="button" id="close-dropdown" class="dropdown-menu-button"><img
             src="img/icons/menu_close.png"></button>
-            <nav id="dropdown-menu">
+            <nav id="dropdown-menu" class="hidden-menu">
                 <ul class="navigation-links-container">
                     <li><a href="#">Women</a></li>
                     <li><a href="#">Men</a></li>
@@ -50,18 +54,22 @@
             <div id="carousel">
                 <ul class="slides-list "> 
                     <li class="slide">
+                        <a href="catalog.html">
                         <picture>
                             <source srcset="img/items_in_carousel/black_white_mobile.png" media="(max-width: 767px)">
                             <source srcset="img/items_in_carousel/black_white_tablet.png" media="(max-width: 1023px)">
                             <img src="img/items_in_carousel/black_white_desktop.png" alt="black and white">
                         </picture>
+                        </a>
                     </li>
                     <li class="slide">
+                        <a href="item.html">
                         <picture>
                             <source srcset="img/items_in_carousel/multiply_promo_mobile.png" media="(max-width: 767px)">
                             <source srcset="img/items_in_carousel/multiply_promo_tablet.jpg" media="(max-width: 1023px)">
                             <img src="img/items_in_carousel/multiply_promo_desktop.png" alt="black and white">
                         </picture>
+                        </a>
                     </li>
                     <li class="slide">
                         <picture>
@@ -76,9 +84,9 @@
             </div>
 
             <div class="banners">
-                <img class="first-banner-image" src="img/banners/1.png" alt="nike red">
+                <a class="first-banner-image" href="item.html"><img  src="img/banners/1.png" alt="nike red"></a>
                 <img class="second-banner-image tablet-visible-banner" src="img/banners/2.png" alt="sale">
-                <img class="third-banner-image desktop-visible-banner" src="img/banners/5.png" alt="caps and hats">
+                <a class="third-banner-image desktop-visible-banner" href="catalog.html"><img  src="img/banners/5.png" alt="caps and hats"></a>
             </div>
             <h2 class="heading">New arrivals</h2>
             <div class="new-arrivals">
@@ -138,7 +146,7 @@
                     <li><a href="#">Customer service</a></li>
                     <li><a href="#">Track my order</a></li>
                     <li><a href="#">Return policy</a></li>
-                    <li><a href="#">Shipping & delivery</a></li>
+                    <li><a href="#">Shipping &#37; delivery</a></li>
                     <li><a href="#">Contact us</a></li>
                     <li><a href="#">Careers</a></li>
                 </ul>
@@ -181,9 +189,9 @@
 
 
                 <ul class="footer-navigation">
-                    <li><a>Legal notice</a></li>
-                    <li><a>Privacy policy</a></li>
-                    <li><a>Site map</a></li>
+                    <li><a href="#">Legal notice</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Site map</a></li>
                 </ul>
             </div>
 

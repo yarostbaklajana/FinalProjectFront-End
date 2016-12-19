@@ -4,7 +4,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Item Details</title>
-    <script type="text/javascript" src="js/dropdown_menu.js"></script>
+    <script type="text/javascript" src="js/dropdown_menu.js" defer></script>
+    <script src="js/buttonsHighlighter.js" defer></script>
+    <script src="js/updaterOfTotalPrice.js" defer></script>
 
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -13,19 +15,23 @@
 
 <body>
     <div class="container">
-        <header>
-            <div class="logo"></div>
-            <div id="header-links-container">
+         <header>
+            <picture class="logo">
+                <source srcset="img/icons/logo.png" media="(max-width: 767px)">
+                <img alt="logo" src="img/icons/logo_full.png">
+            </picture>
+            <div class="header-links-container">
                 <a href="#" class="sign-up-link">E-mail sign up</a>
-                <a href="shopping_bag.html">Bag</a>
-                <span class="total-price"></span>
-                <span id="total-count"></span>
+                <a href="shopping_bag.html" class="shopping-bag-link">Bag</a>
+                
+                <span class="total-price">&pound;1640.50</span>
+                <span class="items-counter">(4)</span>
             </div>
             <button type="button" id="dropdown-button" class="dropdown-menu-button"><img src="img/icons/nav_open.png"
                                                                                  alt="menu"></button>
             <button type="button" id="close-dropdown" class="dropdown-menu-button"><img
             src="img/icons/menu_close.png"></button>
-            <nav id="dropdown-menu">
+            <nav id="dropdown-menu" class="hidden-menu">
                 <ul class="navigation-links-container">
                     <li><a href="#">Women</a></li>
                     <li><a href="#">Men</a></li>
@@ -47,14 +53,14 @@
             </h1>
 
             <div class="item-images-bar">
-                <img class="front-item-picture" src="img/item/th_item.png" alt="item">
-                <img class="item-thumbnail" src="img/item/th_item.png" alt="item thumbnail">
+                <img class="front-item-picture" src="img/item/item.png" alt="item">
+                <img class="item-thumbnail" src="img/item/item.png" alt="item thumbnail">
                 <img class="item-thumbnail" src="img/item/th_item.png" alt="item thumbnail">
                 <img class="item-thumbnail" src="img/item/th_item.png" alt="item thumbnail">
             </div>
             <div class="item-detailed-description-container">
-                <h3 class="name">Dark classic fit suit</h3>
-                <p class="price">&pound;180.60</p>
+                <h3 class="detailed-name">Dark classic fit suit</h3>
+                <p class="detailed-price">&pound;180.60</p>
                 <p class="item-description">Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs and a
                     subtle stripe pattern throughout. </p>
 
@@ -84,9 +90,9 @@
             </div>
 
         </main>
-        <footer>
+       <footer>
             <div class="customer-navigation">
-                <h3>Quick Links</h3>
+                <h3 class="heading-of-footer-sections">Quick Links</h3>
                 <ul class="links-list">
                     <li><a href="#">Store locator</a></li>
                     <li><a href="#">Gift cards</a></li>
@@ -95,24 +101,24 @@
                     <li><a href="#">Support</a></li>
                 </ul>
             </div>
-            <div class="customer-navigation">
-                <h3>Customer Care</h3>
+            <div class="customer-navigation customer-care">
+                <h3 class="heading-of-footer-sections">Customer Care</h3>
                 <ul class="links-list">
                     <li><a href="#">Customer service</a></li>
                     <li><a href="#">Track my order</a></li>
                     <li><a href="#">Return policy</a></li>
-                    <li><a href="#">Shipping & delivery</a></li>
+                    <li><a href="#">Shipping &#37; delivery</a></li>
                     <li><a href="#">Contact us</a></li>
                     <li><a href="#">Careers</a></li>
                 </ul>
             </div>
 
             <section class="contact-info">
-                <h3>Questions</h3>
+                <h3 class="heading-of-footer-sections">Questions</h3>
                 <p><img src="img/icons/ico_tw.png" alt="icon"> Tweet us <span class="temp">@template</span></p>
             </section>
-            <section class="contact-info">
-                <h3>Order by phone</h3>
+            <section class="contact-info bordered-left-contact-info">
+                <h3 class="heading-of-footer-sections">Order by phone</h3>
                 <p>8-800-409-47-12</p>
             </section>
 
@@ -144,9 +150,9 @@
 
 
                 <ul class="footer-navigation">
-                    <li><a>Legal notice</a></li>
-                    <li><a>Privacy policy</a></li>
-                    <li><a>Site map</a></li>
+                    <li><a href="#">Legal notice</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Site map</a></li>
                 </ul>
             </div>
 
