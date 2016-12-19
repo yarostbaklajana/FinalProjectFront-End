@@ -18,15 +18,15 @@
             
 
         function addCarouselButtons() {
-            slides.forEach(function(item, index) {
+            for (var i = 0; i < slides.length; i += 1) {
                 var carouselButton = document.createElement('li');
                 carouselButton.classList.add('carousel-control');
-                carouselButton.setAttribute('id', 'carousel-btn-' + index)
-                if (index === 0) {
+                carouselButton.setAttribute('id', 'carousel-btn-' + i)
+                if (i === 0) {
                     carouselButton.classList.add('checked');
                 }
                 carouselControlsContainer.appendChild(carouselButton);
-            });
+            }
         }
 
         function launchCarousel() {
