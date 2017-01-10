@@ -423,12 +423,21 @@ figure img {
     margin-top: 20px;
 }
 
-.front-item-picture {
+.full-item-picture {
     width: 100%;
 }
 
 .item-thumbnail {
+    box-sizing: border-box;
     width: 33.33%;
+}
+
+.active-thumbnail {
+    -webkit-filter: brightness(0.5);
+    -ms-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    -ms-transition: transform 1s ease-in-out;
+    -ms-transform: translate(0, 0);
+
 }
 
 .shopping-bag-heading {
@@ -575,7 +584,7 @@ figure img {
         margin: 10px;
     }
    
-   .front-item-picture {
+   .full-item-picture {
        width: 75%;
        float: left;
    }
@@ -649,7 +658,7 @@ figure img {
        margin-right: 5%;
    }
 
-   .front-item-picture {
+   .full-item-picture {
        width: 100%;
        clear: both;
    }
