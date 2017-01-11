@@ -194,6 +194,7 @@ figure img {
 
 .item-short-overview-block {
     width: 47.5%;
+    
 }
 
 .tablet-visible-item-short-overview, .desktop-visible-item-short-overview {
@@ -213,6 +214,29 @@ figure img {
     margin-top: 0px;
 }
 
+.item-image-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.view-item-cover {
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 10;
+    font-size: 26px;
+    text-align: center;
+    padding-top: 60%;
+    
+}
+
+.item-image-container:hover .view-item-cover {
+    visibility: visible;
+}
 
 
 /* for start page */
@@ -265,56 +289,6 @@ figure img {
     border: none;
     float: right;
     background: url("../img/icons/filter.png") center no-repeat;
-}
-
-.dropdown-filters {
-    width: 100%;
-    display: block;
-    font-family: "Open Sans";
-    position: absolute;
-    background: white;
-}
-
-.hidden-filters {
-    display: none;
-}
-
-.filters-hint {
-    font-size: 14px;
-    font-weight: normal;
-    font-style: italic;
-    margin: 35px 5% 55px 5%;
-}
-
-
-.filters-section-heading {
-    margin-left: 5%;
-    font-family: "Roboto";
-    margin-bottom: 0;
-}
-
-.list-of-filters {
-    padding: 0;
-    font-size: 0;
-    margin: auto 30px 35px 5%;
-    list-style-type: none;
-    white-space: nowrap;
-    position: relative;
-    left: 0;
-    transition: left 1s ease-in-out;
-}
-
-.filter-value {
-    display: inline-block;
-    font-size: 28px;
-    margin-right: 20px;
-    font-family: "Open Sans";
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.selected-filter-value {
-    color: #f14a58;
 }
 
 .extra-offer-container {
@@ -423,6 +397,15 @@ figure img {
     margin-top: 20px;
 }
 
+.item-images-bar::before, .item-images-bar::after {
+    content: "";
+    display: table;
+}
+
+.item-images-bar::after {
+    clear: both;
+}
+
 .full-item-picture {
     width: 100%;
 }
@@ -430,6 +413,7 @@ figure img {
 .item-thumbnail {
     box-sizing: border-box;
     width: 33.33%;
+    cursor: pointer;
 }
 
 .active-thumbnail {
