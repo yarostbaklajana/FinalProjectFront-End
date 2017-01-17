@@ -327,6 +327,14 @@ figure img {
     border-bottom: 1px solid #a5a5a5;
 }
 
+.item-in-bag-pattern {
+    display: none;
+}
+
+.shopping-bag-message {
+    color: #f14a58;
+}
+
 .notice {
     font-size: 10px;
     background: #e5e5e5;
@@ -394,7 +402,7 @@ figure img {
 
 .item-images-bar, .catalog-body {
     font-size: 0;
-    margin-top: 20px;
+    margin-top: 5%;
 }
 
 .item-images-bar::before, .item-images-bar::after {
@@ -423,6 +431,17 @@ figure img {
     -ms-transform: translate(0, 0);
 
 }
+
+.not-found-message {
+    margin: 5%;
+    color: #f14a58;
+}
+
+.link-to-details {
+    color: #f14a58;
+}
+
+
 
 .shopping-bag-heading {
     font-size: 20px;
