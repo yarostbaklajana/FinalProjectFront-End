@@ -4,8 +4,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Shopping Bag</title>
-    <script src="js/dropdown_menu.js" defer></script>
-    <script src="js/shoppingbagController.js" defer></script>
 
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/header_footer.css">
@@ -48,49 +46,17 @@
             <h1 class="page-heading shopping-bag-heading">Shopping bag</h1>
             <div class="items-in-bag">
             
-            <figure class="item-added-to-bag">
-                    <img src="img/catalog/1.png" alt="item">
+            <figure class="item-added-to-bag item-in-bag-pattern">
+                    <img class="item-in-bag-image" alt="item">
                     <figcaption class="item-properties-description">
-                        <h5 class="name">Only Skinny Jeans</h5>
-                        <p class="color">Color: Philipa wash</p>
-                        <p class="size">Size: UK 17</p>
-                        <p class="quantity">Quantity: 1</p>
+                        <h5 class="name"></h5>
+                        <p class="color"></p>
+                        <p class="size"></p>
+                        <p class="quantity"></p>
                         <button type="button" class="removing-item-button">Remove item</button>
                     </figcaption>
                 </figure>
 
-                <figure class="item-added-to-bag">
-                    <img src="img/catalog/2.png" alt="item">
-                    <figcaption class="item-properties-description">
-                        <h5 class="name">Neck Knittet Jumper</h5>
-                        <p class="color">Color: Philipa wash</p>
-                        <p class="size">Size: UK 17</p>
-                        <p class="quantity">Quantity: 1</p>
-                        <button type="button" class="removing-item-button">Remove item</button>
-                    </figcaption>
-                </figure>
-
-                 <figure class="item-added-to-bag">
-                    <img src="img/catalog/3.png" alt="item">
-                    <figcaption class="item-properties-description">
-                        <h5 class="name">Tirtle Neck jumper in Rib</h5>
-                        <p class="color">Color: Philipa wash</p>
-                        <p class="size">Size: UK 17</p>
-                        <p class="quantity">Quantity: 1</p>
-                        <button type="button" class="removing-item-button">Remove item</button>
-                    </figcaption>
-                </figure>
-
-                 <figure class="item-added-to-bag">
-                    <img src="img/catalog/4.png" alt="item">
-                    <figcaption class="item-properties-description">
-                        <h5 class="name">With Patchwork Crochet</h5>
-                        <p class="color">Color: Philipa wash</p>
-                        <p class="size">Size: UK 17</p>
-                        <p class="quantity">Quantity: 1</p>
-                        <button type="button" class="removing-item-button">Remove item</button>
-                    </figcaption>
-                </figure>
                 </div>
             <aside class="notice">
                 <p>You've qualified for Free UK Next Day Delivery on your order.</p>
@@ -176,7 +142,10 @@
     </div>
 
     
-
+<script src="js/dropdown_menu.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/bagStorage.js"></script>
+<script src="js/shoppingBag.js"></script>
 </body>
 
 </html>
