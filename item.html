@@ -4,13 +4,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Item Details</title>
-    <script type="text/javascript" src="js/dropdown_menu.js" defer></script>
-    <script src="js/buttonsHighlighter.js" defer></script>
-    <script src="js/updaterOfTotalPrice.js" defer></script>
-    <script src="js/photoSwitcher.js" defer></script>
-    <script src="js/storage.js" defer></script>
-    <script src="js/items.js" defer></script>
-    <script src="js/viewModel.js" defer></script>
+    
 
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -55,38 +49,38 @@
             <h1 class="page-heading">
                 <a class="back-to-catalog-link" href="catalog.html">&lt; Back to catalog</a>
             </h1>
-
+            <div class="item-details">
             <div class="item-images-bar">
-                <img class="full-item-picture" src="img/item/th_item_0.jpg" alt="item">
-                <img class="item-thumbnail active-thumbnail" src="img/item/th_item_0.jpg" alt="item thumbnail">
-                <img class="item-thumbnail" src="img/item/th_item_1.jpg" alt="item thumbnail">
-                <img class="item-thumbnail" src="img/item/th_item_2.jpg" alt="item thumbnail">
+                <img class="full-item-picture" alt="item">
+                <img class="item-thumbnail active-thumbnail" alt="item thumbnail">
+                <img class="item-thumbnail" alt="item thumbnail">
+                <img class="item-thumbnail" alt="item thumbnail">
             </div>
             <div class="item-detailed-description-container">
-                <h3 class="detailed-name">Dark classic fit suit</h3>
-                <p class="detailed-price">&pound;180.60</p>
+                <h3 class="detailed-name"></h3>
+                <p class="detailed-price"></p>
                 <p class="item-description">Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs and a
                     subtle stripe pattern throughout. </p>
 
 
                 <div class="item-property-buttons-container">
                     <h5 class="prop-heading">Size</h5>
-                    <button class="property-button" type="button">UK 52</button>
-                    <button class="property-button" type="button">UK 54</button>
-                    <button class="property-button" type="button">UK 56</button>
+                    <button class="highligted-property-button property-button size-property" type="button" value="UK 52">UK 52</button>
+                    <button class="property-button size-property" type="button" value="UK 54">UK 54</button>
+                    <button class="property-button size-property" type="button" value="UK 56">UK 56</button>
                 </div>
 
                 <div class="item-property-buttons-container">
                     <h5 class="prop-heading">Color</h5>
-                    <button class="property-button" type="button">Black</button>
-                    <button class="property-button" type="button">Blue</button>
+                    <button class="highligted-property-button property-button color-property" type="button" value="Black">Black</button>
+                    <button class="property-button color-property" type="button" value="Blue">Blue</button>
                 </div>
 
                 <div class="main-button-container centered-buttons">
-                    <button type="button" class="main-button">Add to bag</button>
+                    <button type="button" id="add-item-button" class="main-button">Add to bag</button>
                 </div>
             </div>
-
+            </div>
             <div class="banners">
                 <img class="first-banner-image" src="img/banners/adidas_blue.png" alt="adidas blue">
                 <img class="second-banner-image tablet-visible-banner" src="img/banners/repair_patches.png" alt="repair patches">
@@ -162,6 +156,13 @@
 
         </footer>
     </div>
+
+    <script src="js/dropdown_menu.js"></script>
+    <script src="js/items.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/bagStorage.js"></script>
+    <script src="js/itemDetails.js"></script>
+    
 </body>
 
 </html>
