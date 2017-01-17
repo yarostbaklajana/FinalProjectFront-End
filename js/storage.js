@@ -1,15 +1,15 @@
 'use strict';
 
-    const bagStorageName = 'bagStorage';
+    var bagStorageName = 'bagStorage';
     
-    var BAG_STORAGE = {
+    var storage = {
 
-        get bagStats() {
-            var stats = JSON.parse(window.localStorage.getItem(bagStorageName)) || {};
-            return stats;
+        get bagParams() {
+            var params = JSON.parse(window.localStorage.getItem(bagStorageName)) || {};
+            return params;
         },
 
-        set bagStats(uploadedStats) {
+        set bagParams(uploadedStats) {
             localStorage.setItem(bagStorageName, JSON.stringify(uploadedStats));
         }
     }
