@@ -21,10 +21,6 @@ a {
     display: none;
 }
 
-a:visited {
-    color: pink;
-}
-
 a:hover {
     color: #f14a58;
     text-shadow: 15px 14px 36px -12px rgba(0,0,0,0.75);
