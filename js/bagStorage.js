@@ -1,6 +1,6 @@
+"use strict";
+
 (function() {
-     
-   
     var bagStorage =  {
     bag: storage.bagParams.bag || [],
        totalCost: storage.bagParams.totalCost || 0,
@@ -24,17 +24,28 @@
            this.totalCost = 0;
            updateState(this.bag, this.totalCost, this.totalCount);
        },
-       removeItem: function(id) {
-           this.bag.splice(id, 1);
-           this.totalCost -= item.price * item.quantity;
-           this.totalCount -= item.quantity;
+       removeItem: function(itemId) {
+           for(var i = 0; i < this.bag.length; i += 1) {
+               if(this.bag[i].id === itemId) {
+                   var item = this.bag[i];
+                   var index = i;
+               }
+           }
+           if(item.quantity > 1) {
+               item.quantity -= 1;
+           } else {
+               this.bag.splice(index, 1);
+           }
+           
+           this.totalCost -= item.price;
+           this.totalCount -= 1;
            updateState(this.bag, this.totalCost, this.totalCount);
        }
     }
 
     function getIndexOfItem(array, item) {
         for(var i = 0; i < array.length; i += 1) {
-            if(array[i].name === item.name && array[i].source === item.source && array[i].price === item.price && array[i].size === item.size && array[i].color === item.color) {
+            if(array[i].name === item.name && array[i].size === item.size && array[i].color === item.color) {
                   return i;
             }
         }
