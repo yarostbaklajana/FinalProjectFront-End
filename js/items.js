@@ -1,6 +1,6 @@
 'use strict';
 
-const ITEMS = [
+window.ITEMS = [
 
     {
       id: 1,
