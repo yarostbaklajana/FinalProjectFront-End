@@ -1,8 +1,5 @@
 (function () {
-
-    var itemDetails = {
-        setItemView: setItemView(getItem())
-    }
+    setItemView(getItem());
 
     function getItem() {
         var params = window.location.hash;
@@ -19,12 +16,12 @@
 
     function setProperties(item) {
         var properties = document.querySelectorAll('.highligted-property-button');
-        properties.forEach(function(property) {
-            if(property.classList.contains('size-property')) {
+        properties.forEach(function (property) {
+            if (property.classList.contains('size-property')) {
                 item.size = property.value;
             }
 
-            if(property.classList.contains('color-property')) {
+            if (property.classList.contains('color-property')) {
                 item.color = property.value;
             }
         });
@@ -52,9 +49,9 @@
             itemDetails.innerHTML = '';
             itemDetails.appendChild(notFoundMessage);
         }
+
+        window.updateTotals(window.bagStorage.totalCost, window.bagStorage.totalCount);
     }
-
-
 
     var imagesBar = document.querySelector('.item-images-bar');
     var fullImage = document.querySelector('.full-item-picture');
@@ -89,7 +86,6 @@
         });
     }
 
-
     function changeHighligtedButton(target) {
         var buttons = target.parentNode.querySelectorAll('.property-button');
         for (var i = 0; i < buttons.length; i += 1) {
@@ -99,10 +95,10 @@
         target.classList.add('highligted-property-button');
     }
 
-
     var addItemButton = document.querySelector('#add-item-button');
     addItemButton.addEventListener('click', function () {
         window.bagStorage.addItemToBag(Object.assign({}, getItem()));
+        window.updateTotals(window.bagStorage.totalCost, window.bagStorage.totalCount);
     });
 
 })();
