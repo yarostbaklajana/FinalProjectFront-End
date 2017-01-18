@@ -457,12 +457,16 @@ figure img {
 
 .item-added-to-bag {
     width: 100%;
-    margin: 20px auto;
+    margin: 5% 0;
 }
 
-.item-added-to-bag img {
+.item-in-bag-image-container {
     width: 50%;
     float: left;
+}
+
+.item-in-bag-image {
+    width: 100%;
 }
 
 .item-properties-description {
