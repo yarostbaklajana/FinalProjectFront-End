@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-         <header>
+        <header>
             <picture class="logo">
                 <source srcset="img/icons/logo.png" media="(max-width: 767px)">
                 <img alt="logo" src="img/icons/logo_full.png">
@@ -45,9 +45,14 @@
         <main class="main-page-content">
             <h1 class="page-heading shopping-bag-heading">Shopping bag</h1>
             <div class="items-in-bag">
-            
+
+            </div>
             <figure class="item-added-to-bag item-in-bag-pattern">
-                    <img class="item-in-bag-image" alt="item">
+                    <div class="item-in-bag-image-container">
+                        <img class="item-in-bag-image" alt="item">
+                        <p class="price"></p>
+                    </div>
+                    
                     <figcaption class="item-properties-description">
                         <h5 class="name"></h5>
                         <p class="color"></p>
@@ -56,16 +61,14 @@
                         <button type="button" class="removing-item-button">Remove item</button>
                     </figcaption>
                 </figure>
-
-                </div>
             <aside class="notice">
                 <p>You've qualified for Free UK Next Day Delivery on your order.</p>
                 <p>Don't forget to enter the code nextday at checkout</p>
             </aside>
 
             <div class="main-button-container justified-buttons">
-                <button type="button" id="clear-bag" class="clear-bag-button">Empty bag</button>
-                <button type="button" class="main-button" id="buy-items">Buy now</button>
+                <button type="button" id="clear-bag-button" class="clear-bag-button">Empty bag</button>
+                <button type="button" class="main-button" id="buy-items-button">Buy now</button>
                 <div class="total-cost-container">
                     <p class="total-cost-heading">Total Cost</p>
                     <p class="total-price">&pound;1640.50</p>
@@ -141,11 +144,12 @@
         </footer>
     </div>
 
-    
-<script src="js/dropdown_menu.js"></script>
-<script src="js/storage.js"></script>
-<script src="js/bagStorage.js"></script>
-<script src="js/shoppingBag.js"></script>
+
+    <script src="js/dropdown_menu.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/bagStorage.js"></script>
+    <script src="js/updateTotals.js"></script>
+    <script src="js/shoppingBag.js"></script>
 </body>
 
 </html>
