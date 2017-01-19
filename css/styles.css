@@ -38,9 +38,6 @@ figure {
     margin: 0;
 }
 
-figure img {
-    vertical-align: middle;
-}
 
 #carousel {
     position: relative;
@@ -73,7 +70,6 @@ figure img {
 
 .slide img {
     width: 100%;
-    vertical-align: middle;
 }
 
 #carousel-controls-container {
@@ -724,6 +720,10 @@ figure img {
         padding-left: 1%;
         outline: none;
         position: relative;
+    }
+
+    .filter-selection::-ms-expand {
+        display: none;
     }
 
     .filter-selection-label {

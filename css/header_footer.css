@@ -1,4 +1,9 @@
 <!--  -->
+body {
+    font-family: 'Roboto';
+    margin: 0;
+} 
+
 header {
     border-bottom: 1px solid #c5c5c5;
 }
@@ -8,7 +13,7 @@ header {
     margin: auto 5%;
 }
 
-.logo img {
+img {
     vertical-align: middle;
 }
 
@@ -57,9 +62,7 @@ a:hover {
 }
 
 
-.dropdown-menu-button img {
-    vertical-align: middle;
-}
+
 
 .dropdown-menu-button:hover {
     background-color: #e5e5e5;
@@ -86,6 +89,7 @@ footer {
     list-style-type: none;
     padding: 0;
     margin: 0 auto;
+    margin-top: 10%;
 }
 
 
@@ -104,7 +108,7 @@ footer {
 }
 
 .customer-navigation {
-    padding-bottom: 40px;
+    padding-bottom: 47px;
 }
 
 .customer-navigation a {
@@ -116,13 +120,22 @@ footer {
     width: 45%;
     float: left;
     padding-left: 5%;
-    padding-top: 15px;
+    padding-top: 5%;
+    
 }
 
 .contact-info {
-    height: 109px;
+    padding-bottom: 33px;
     border-top: 1px solid #c5c5c5;
     border-bottom: 1px solid #c5c5c5;
+}
+
+.contacts img {
+    margin-right: 10px;
+}
+
+.contact-info-heading {
+    margin: 0
 }
 
 .bordered-left-contact-info {
@@ -141,9 +154,8 @@ footer {
     border-bottom: 1px solid #c5c5c5;
 }
 
-.heading-of-footer-sections{
+.heading-of-footer-sections, .contact-info-heading {
     font-family: "Open Sans";
-    margin-bottom: 20px;
 }
 
 .footer-navigation {
@@ -167,7 +179,8 @@ footer {
 .follow-buttons-container, .share {
     width: 25%;
     float: right;
-    padding-left: 5%;
+    text-align: right;
+    padding-right: 5%;
 }
 
 .follow-button-facebook, .follow-button-twitter, .share-button {
@@ -195,6 +208,7 @@ footer {
 }
 
 .share-button {
+    line-height: 20px;
     width: 50px;
     background: url("../img/icons/share.png") center no-repeat;
 }
@@ -296,7 +310,6 @@ footer {
     .customer-navigation, .contact-info {
         width: 28%;
         border: none;
-        padding-top: 38px;
     }
 
     .customer-navigation {
@@ -312,22 +325,34 @@ footer {
         margin-bottom: 30px;
     }
 
+    .contact-info {
+        padding-bottom: 0;
+    }
+
+    .contacts {
+        font-size: 14px;
+    }
+
+    
+
     .customer-care, .contact-info, .bordered-left-contact-info, .follow-buttons-container {
         padding-left: 15px;
     }
 
     .bordered-left-contact-info {
-        padding-top: 0;
+        padding-top: 15px;
     }
-    
-    .contact-info .heading-of-footer-sections {
-        margin-bottom: 15px;
+
+    .heading-of-footer-sections, .contact-info-heading {
+        font-size: 16px;
+        margin: 5% auto;
     }
 
     .follow-buttons-container {
         float: left;
         border: none;
-        padding-top: 15px;
+        padding-top: 52px;
+        text-align: left;
     }
 
     .footer-navigation {
@@ -345,9 +370,11 @@ footer {
  
     .about-site-info .footer-navigation {
         display: block;
-        width: 35.3%;
         float: right;
         margin: 0;
+        text-align: right;
+        padding-right: 5%;
+        width: 33.3%;
     }
 
     .footer-navigation a {
@@ -365,7 +392,10 @@ footer {
     }
 
     .share {
-        width: 15%;
+        text-align: center;
+        font-size: 16px;
+        padding: 0;
+        width: 23.4%;
         float: left;
     }
    
@@ -387,7 +417,7 @@ footer {
     .search-input {
         margin: 12px 5% 12px auto;
         display: block;
-        line-height: 30px;
+        padding-bottom: 5px;
     }
 
     .customer-navigation {
@@ -395,7 +425,7 @@ footer {
     }
 
     .bordered-left-contact-info {
-        padding-top: 38px;
+        padding-top: 5%;
     }
 
     .customer-care {

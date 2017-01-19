@@ -2,9 +2,12 @@ window.updateTotals = function (totalCost, totalCount) {
     var totalCostFields = document.querySelectorAll('.total-price');
     var totalCountField = document.querySelector('.items-counter');
 
-    totalCostFields.forEach(function (field) {
-        field.textContent = String.fromCharCode(163) + totalCost;
-    });
+   
+        for(var i = 0; i < totalCostFields.length; i += 1) {
+            totalCostFields[i].textContent = String.fromCharCode(163) + totalCost;
+        }
+        
+    
 
     totalCountField.textContent = '(' + totalCount + ')';
 }
