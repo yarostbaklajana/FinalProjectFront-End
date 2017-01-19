@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>Homepage</title>
-    <script type="text/javascript" src="js/dropdown_menu.js" defer></script>
-    <script type="text/javascript" src="js/carousel.js" defer></script>
-    <script type="text/javascript" src="js/picturefill.js" defer></script>
+    
 
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -27,12 +25,12 @@
                 <a href="#" class="sign-up-link">E-mail sign up</a>
                 <a href="shopping_bag.html" class="shopping-bag-link">Bag</a>
 
-                <span class="total-price">&pound;1640.50</span>
-                <span class="items-counter">(4)</span>
+                <span class="total-price"></span>
+                <span class="items-counter"></span>
             </div>
             <button type="button" id="dropdown-button" class="dropdown-menu-button"><img src="img/icons/nav_open.png"
                                                                                  alt="menu"></button>
-            <button type="button" id="close-dropdown" class="dropdown-menu-button"><img
+            <button type="button" id="close-dropdown" class="hidden-button dropdown-menu-button"><img
             src="img/icons/menu_close.png"></button>
             <nav id="dropdown-menu" class="hidden-menu">
                 <ul class="navigation-links-container">
@@ -172,8 +170,8 @@
 
             <ul class="footer-navigation">
                 <li><a href="#">Legal notice</a></li>
-                <li><a>Privacy policy</a></li>
-                <li><a>Site map</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Site map</a></li>
             </ul>
 
             <div class="follow-buttons-container">
@@ -202,6 +200,14 @@
 
         </footer>
     </div>
+
+    <script src="js/dropdown_menu.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/picturefill.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/bagStorage.js"></script>
+    <script src="js/updateTotals.js"></script>
+    <script src="js/setTotals.js"></script>
 </body>
 
 </html>

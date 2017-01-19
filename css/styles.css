@@ -22,6 +22,7 @@ a img {
 
 .fixed-container {
     position: fixed;
+    width: 100%;
 }
 
 .hidden-menu {
@@ -74,7 +75,7 @@ figure {
 
 #carousel-controls-container {
     list-style-type: none;
-    z-index: 3;
+    z-index: 2;
     position: absolute;
     bottom: 0;
     height: 10.2%;

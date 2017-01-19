@@ -1,0 +1,1 @@
+window.updateTotals(window.bagStorage.totalCost, window.bagStorage.totalCount);

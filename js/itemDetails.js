@@ -96,11 +96,14 @@
     }
 
     var addItemButton = document.querySelector('#add-item-button');
-    addItemButton.addEventListener('click', function () {
 
-        window.bagStorage.addItemToBag(cloneObject(getItem()));
-        window.updateTotals(window.bagStorage.totalCost, window.bagStorage.totalCount);
-    });
+    if(addItemButton) {
+        addItemButton.addEventListener('click', function () {
+
+            window.bagStorage.addItemToBag(cloneObject(getItem()));
+            window.updateTotals(window.bagStorage.totalCost, window.bagStorage.totalCount);
+        });
+    }
 
     function cloneObject(object) {
         var clone = {};

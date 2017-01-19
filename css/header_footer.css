@@ -22,10 +22,6 @@ a {
     color: black;
 }
 
-.items-counter {
-    display: none;
-}
-
 a:hover {
     color: #f14a58;
     text-shadow: 15px 14px 36px -12px rgba(0,0,0,0.75);
@@ -40,7 +36,7 @@ a:hover {
     margin-left: 50px;
 }
 
-.sign-up-link, .total-price {
+.sign-up-link {
     display: none;
 }
 
@@ -73,7 +69,7 @@ a:hover {
     box-sizing: border-box;
 }
 
-#close-dropdown {
+.hidden-button {
     display: none;
 }
 

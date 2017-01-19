@@ -17,12 +17,13 @@
             <div class="header-links-container">
                 <a href="#" class="sign-up-link">E-mail sign up</a>
                 <a href="shopping_bag.html" class="shopping-bag-link">Bag</a>
-                <span class="total-price">&pound;1640.50</span>
-                <span class="items-counter">(4)</span>
+
+                <span class="total-price"></span>
+                <span class="items-counter"></span>
             </div>
             <button type="button" id="dropdown-button" class="dropdown-menu-button"><img src="img/icons/nav_open.png"
                                                                                  alt="menu"></button>
-            <button type="button" id="close-dropdown" class="dropdown-menu-button"><img
+            <button type="button" id="close-dropdown" class="hidden-button dropdown-menu-button"><img
             src="img/icons/menu_close.png"></button>
             <nav id="dropdown-menu" class="hidden-menu">
                 <ul class="navigation-links-container">
@@ -233,7 +234,7 @@
             </div>
 
         </main>
-     <footer>
+    <footer>
             <div class="customer-navigation">
                 <h3 class="heading-of-footer-sections">Quick Links</h3>
                 <ul class="links-list">
@@ -257,12 +258,12 @@
             </div>
 
             <section class="contact-info">
-                <h3 class="heading-of-footer-sections">Questions</h3>
-                <p><img src="img/icons/ico_tw.png" alt="icon"> Tweet us <span class="temp">@template</span></p>
+                <h3 class="contact-info-heading">Questions</h3>
+                <p class="contacts"><img src="img/icons/ico_tw.png" alt="icon"> Tweet us <span class="temp">@template</span></p>
             </section>
             <section class="contact-info bordered-left-contact-info">
-                <h3 class="heading-of-footer-sections">Order by phone</h3>
-                <p>8-800-409-47-12</p>
+                <h3 class="contact-info-heading">Order by phone</h3>
+                <p class="contacts">8-800-409-47-12</p>
             </section>
 
             <div class="delivery-service-advertisement">
@@ -270,9 +271,9 @@
             </div>
 
             <ul class="footer-navigation">
-                <li><a>Legal notice</a></li>
-                <li><a>Privacy policy</a></li>
-                <li><a>Site map</a></li>
+                <li><a href="#">Legal notice</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Site map</a></li>
             </ul>
 
             <div class="follow-buttons-container">
@@ -288,7 +289,7 @@
 
                 <div class="share">
                     <span>Share</span>
-                    <button type="button" class="share-button">1 437</button>
+                    <button type="button" class="share-button" value="1 437">1 437</button>
                 </div>
 
 
@@ -303,5 +304,9 @@
     </div>
 
     <script  src="js/dropdown_menu.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/bagStorage.js"></script>
+    <script src="js/updateTotals.js"></script>
+    <script src="js/setTotals.js"></script>
 </body>
 </html>
