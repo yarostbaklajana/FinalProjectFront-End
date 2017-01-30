@@ -21,7 +21,7 @@ a img {
 }
 
 .fixed-container {
-    position: fixed;
+    max-height: 100vh;
     width: 100%;
 }
 
@@ -48,7 +48,6 @@ figure {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 300%;
 }
 
 .slides-list::before, .slides-list::after {
@@ -61,7 +60,6 @@ figure {
 }
 
 .slide {
-    width: 33.3%;
     float: left;
     position: relative;
     transition: left 1s ease-in-out;
@@ -413,6 +411,7 @@ figure {
 
 .full-item-picture {
     width: 100%;
+    transition: opacity 1s ease-in-out;
 }
 
 .item-thumbnail {

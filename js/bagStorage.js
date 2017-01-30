@@ -6,7 +6,6 @@
        totalCost: storage.bagParams.totalCost || 0,
        totalCount: storage.bagParams.totalCount || 0,
        addItemToBag: function(item) {
-           
            if( getIndexOfItem(this.bag, item) !== -1) {
                this.bag[getIndexOfItem(this.bag, item)].quantity += 1;
            } else {

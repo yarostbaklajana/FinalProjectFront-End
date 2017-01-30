@@ -3,9 +3,12 @@
 
     function Carousel() {
             var currentPosition = 0;
-            var step = 33.3;
+            
             var previousChecked = 0;
             var slides = document.querySelectorAll('.slide');
+            var slidesContainer = document.querySelector('.slides-list');
+            slidesContainer.style.width = 100 * slides.length + '%';
+            var step = 100 / slides.length;
             var carouselControlsContainer = document.getElementById('carousel-controls-container');
             carouselControlsContainer.addEventListener('click', function(e) {
                 if(e.target.classList.contains('carousel-control')) {
@@ -15,8 +18,11 @@
 
             addCarouselButtons();
             launchCarousel();
-            
 
+        for(var i = 0; i < slides.length; i += 1) {
+            slides[i].style.width = step + '%';
+        }    
+        
         function addCarouselButtons() {
             for (var i = 0; i < slides.length; i += 1) {
                 var carouselButton = document.createElement('li');
